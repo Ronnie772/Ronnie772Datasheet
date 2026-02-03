@@ -23,3 +23,4 @@ This module prioritizes safety and fault handling, including rapid emergency sto
 | UART communication | Basic motor state messaging | Structured motor telemetry reporting | Yes |
 | Safe-state behavior | Motors stop on fault | Guaranteed motor disable on fault or comms loss | No |
 | System reset behavior | Manual reset required | Fast recovery for repeated demos | No |
+
