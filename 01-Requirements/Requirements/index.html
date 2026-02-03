@@ -825,7 +825,9 @@
   <h1>Module's Requirements</h1>
 
 <h2 id="module-requirements">Module Requirements</h2>
-<p>The following sections document the requirements that the this module need to fulfills to .....</p>
+<p>Actuator Control Module Overview (PIC)</p>
+<p>The Actuator Control module is responsible for executing motor commands and ensuring safe, responsive movement of the robot. Implemented on a PIC microcontroller, this module receives motion and safety commands over UART and generates PWM signals to drive the motor controller, enabling controlled forward and backward motion.</p>
+<p>This module prioritizes safety and fault handling, including rapid emergency stop response, overcurrent protection, and thermal shutdown. In the event of a fault or loss of communication, the system transitions to a safe state by disabling motor output, ensuring predictable and reliable behavior during operation and demonstrations.</p>
 <table>
 <thead>
 <tr>
@@ -837,28 +839,58 @@
 </thead>
 <tbody>
 <tr>
-<td>Surface mounted, 3.3V switching power regulatore</td>
-<td>3.2 Volts</td>
-<td>3.3 Volts</td>
+<td>PIC microcontroller operation</td>
+<td>Execute firmware</td>
+<td>Motors respond correctly to PWM</td>
 <td style="text-align: center;">No</td>
 </tr>
 <tr>
-<td>Surface mounted microcontroller</td>
-<td>1 PIC or ESP</td>
-<td>8-bit PIC</td>
+<td>Motor control functionality</td>
+<td>Forward and backward motion</td>
+<td>Smooth, speed controlled driving</td>
 <td style="text-align: center;">No</td>
 </tr>
 <tr>
-<td>Wireless Communication</td>
-<td>Able to send or receive a Wi-Fi data</td>
-<td>Send and receive Wi-Fi Data to MQTT</td>
+<td>Motor driver interface</td>
+<td>Driver responds to control signals</td>
+<td>PWM control with current limiting</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Emergency stop response</td>
+<td>Motors stop within 1 second</td>
+<td>Motors stop within 250 ms</td>
 <td style="text-align: center;">Yes</td>
 </tr>
 <tr>
-<td><em>Rest are items your modules needs to support the task you are covering for the team's device.</em></td>
-<td>---</td>
-<td>---</td>
-<td style="text-align: center;"><strong>NO</strong></td>
+<td>Overcurrent protection</td>
+<td>Warning issued</td>
+<td>Automatic motor shutdown</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Thermal protection</td>
+<td>Warning issued</td>
+<td>Automatic motor shutdown</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>UART communication</td>
+<td>Basic motor state messaging</td>
+<td>Structured motor telemetry reporting</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Safe-state behavior</td>
+<td>Motors stop on fault</td>
+<td>Guaranteed motor disable on fault or comms loss</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>System reset behavior</td>
+<td>Manual reset required</td>
+<td>Fast recovery for repeated demos</td>
+<td style="text-align: center;">No</td>
 </tr>
 </tbody>
 </table>
