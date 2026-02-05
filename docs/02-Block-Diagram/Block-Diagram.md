@@ -15,10 +15,11 @@ Things to mention are:
 * Power source
 * ...
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
 
 
-## Example Block Diagram 
-Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
 
-![Example of Indivial Block diagram ](individual-block-diagram.png)
+## Block Diagram 
+
+
+[Indivial Block diagram ](<img width="1141" height="612" alt="block-diagram-RSC-EGR314 drawio" src="https://github.com/user-attachments/assets/ae06e1b8-3e5a-4aae-8794-8ee06a653d76" />)
+
