@@ -47,19 +47,19 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 > Also acceptable, more markdown friendly
 
-**External Clock Module**
+**Motor Driver**
 
-1. XC1259TR-ND surface mount crystal
+1. DRV8220DRLR surface mount crystal
 
-    ![](image1.png)
+    <img width="428" height="331" alt="image" src="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed" />
 
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
+    * $0.77/each
+    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783)
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
+    | Meets surface mount constraint of project | Needs special PCB layout.                                        |
+    
 
 **Rationale:** A clock oscillator is easier ...
