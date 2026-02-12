@@ -56,6 +56,8 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
     * $0.77/each
     * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783)
 
+        <br>
+
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Inexpensive                               | Requires external components and support circuitry for interface |
