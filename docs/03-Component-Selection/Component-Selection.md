@@ -4,30 +4,45 @@ title: Module's Selected Major Components
 
 ## Module's Selected Major Components
 
-The following sections are the selected major components necessary for  .....
-
->**For each of the following sections, use <ins>one of the two styles</ins> given near the end. *REMOVE THIS NOTE***
 
 ### Power Management
 
-(**remove this note/placeholder**: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} **THAT WERE SELECTED**)
+**Power Supply**
 
-For more details, review the ["Appendix - Component Selection Process - Power Mangement"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#power-management) selection.
+1. PJ-102AH
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/711629bb-e7f1-4532-80e1-d3b02cca3b3b" />
 
-### Sensor
 
-(**remove this note/placeholder**: if applicable, this is where your  **SELECTED** sensor is shown. Otherwise, remove this section.)
 
-For more details, review the ["Appendix - Component Selection Process - Sensor"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#sensor) selection.
+   * $0.76
+   * [Link to product](https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Inexpensive                                                     | Side load fragility |
+    | Polybutylene Terephthalate for housing                            |                     |
+    |                                                                   |                     |
 
-### Actuator
+1. B2B-PH-K-S
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
 
-(**remove this note/placeholder**: if applicable, this is where your **Selected** the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)
 
-For more details, review the ["Appendix - Component Selection Process - Actuator"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator) selection.
+
+    * $0.1
+    * [Link to product](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
+    * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
+ 
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Inexpensive                                                     | requires a bulky battery pack |
+    | compact                                                      |                     |
+    | Ideal for exploration devices not connected to a wall   |                     |
 
 -----------
 
+### Actuator
 
 **Motor Driver**
 
@@ -129,35 +144,5 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 **Rationale:** The 2371 6v motor by Pololu is perfect match for our 5v power rail and eliminates the need for an extra one, keeping the PCB design simple. It is lightweight and has the highest toque output, therefore saving cost and increasing productivity.
 
-**Power Supply**
+-----------
 
-1. PJ-102AH
-   
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/711629bb-e7f1-4532-80e1-d3b02cca3b3b" />
-
-
-
-   * $0.76
-   * [Link to product](https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448)
-  
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Inexpensive                                                     | Side load fragility |
-    | Polybutylene Terephthalate for housing                            |                     |
-    |                                                                   |                     |
-
-1. B2B-PH-K-S
-   
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
-
-
-
-    * $0.1
-    * [Link to product](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
-    * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
- 
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Inexpensive                                                     | requires a bulky battery pack |
-    | compact                                                      |                     |
-    | Ideal for exploration devices not connected to a wall   |                     |
