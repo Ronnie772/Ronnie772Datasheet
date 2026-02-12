@@ -974,6 +974,172 @@
 | Meets surface mount constraint of project | Cannot run both motors simultaneously                 |
 </code></pre>
 <p><strong>Rationale:</strong> A clock oscillator is easier ...</p>
+<p><strong>Motors</strong></p>
+<ol>
+<li>
+<p>M1N10FB11G 5V motor</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/f51a6bd4-771a-4e88-a692-95ec44e6323e" data-desc-position="bottom"><img width="200" height="200" alt="Screenshot 2025-10-21 220238" src="https://github.com/user-attachments/assets/f51a6bd4-771a-4e88-a692-95ec44e6323e"></a></p>
+<ul>
+<li>$3.19/each</li>
+<li><a href="(https://www.digikey.com/en/products/detail/nmb-technologies-corporation/M1N10FB11G/2417078)">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inexpensive</td>
+<td>Low torque</td>
+</tr>
+<tr>
+<td>Perfectly matches 5V rail</td>
+<td>Tendency to spike in amperage when turned on</td>
+</tr>
+<tr>
+<td>Lightweight</td>
+<td>Requires a diffrent Voltage regulator</td>
+</tr>
+<tr>
+<td>Available for bulk order for replacements</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>SE15K1BTYJ 12V motor</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/200d5539-51be-4632-ba1e-df6a95210c7f" data-desc-position="bottom"><img width="200" height="200" alt="Screenshot 2025-10-21 220755" src="https://github.com/user-attachments/assets/200d5539-51be-4632-ba1e-df6a95210c7f"></a></p>
+<ul>
+<li>$9.24/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/nmb-technologies-corporation/SE15K1BTYJ/6021448">Link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Higher Torque</td>
+<td>Higher Price</td>
+</tr>
+<tr>
+<td>Small and compact</td>
+<td>Requires a diffrent Voltage regulator</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>2371 6V motor (Pololu)</p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/0165aa5f-2a6e-4fd3-abc3-cc830815b42e" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0165aa5f-2a6e-4fd3-abc3-cc830815b42e"></a></p>
+<ul>
+<li>$23.95</li>
+<li>
+<p><a href="https://www.digikey.com/en/products/detail/pololu/2371/10450018?s=N4IgTCBcDa4MwHYCMACADgewDbYK4oBMBjFAWwwBcMAnEAXQF8g">Link to product</a></p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Highest Torque</td>
+<td>Higher Price</td>
+</tr>
+<tr>
+<td>Small and compact</td>
+<td>Low RPM</td>
+</tr>
+<tr>
+<td>Doesn't require an additional power rail</td>
+<td></td>
+</tr>
+<tr>
+<td>Lightweight</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><strong>Choice:</strong> Option 3: 2371 6V motor (Pololu)</p>
+<p><strong>Rationale:</strong> The 2371 6v motor by Pololu is perfect match for our 5v power rail and eliminates the need for an extra one, keeping the PCB design simple. It is lightweight and has the highest toque output, therefore saving cost and increasing productivity.</p>
+<p><strong>Power Supply</strong></p>
+<ol>
+<li>PJ-102AH</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/711629bb-e7f1-4532-80e1-d3b02cca3b3b" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/711629bb-e7f1-4532-80e1-d3b02cca3b3b"></a></p>
+<ul>
+<li>$0.76</li>
+<li>
+<p><a href="https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448">Link to product</a></p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>From the kit</td>
+<td>Side load fragility</td>
+</tr>
+<tr>
+<td>Polybutylene Terephthalate for housing</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>B2B-PH-K-S</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a"></a></p>
+<ul>
+<li>$0.76</li>
+<li>
+<p><a href="https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448">Link to product</a></p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>From the kit</td>
+<td>Side load fragility</td>
+</tr>
+<tr>
+<td>Polybutylene Terephthalate for housing</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 
 
 
