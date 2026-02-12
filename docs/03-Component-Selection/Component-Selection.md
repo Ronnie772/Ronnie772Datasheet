@@ -142,7 +142,7 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
   
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
-    | From the kit                                                      | Side load fragility |
+    | Inexpensive                                                     | Side load fragility |
     | Polybutylene Terephthalate for housing                            |                     |
     |                                                                   |                     |
 
@@ -152,11 +152,12 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 
 
-   * $0.76
-   * [Link to product](https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448)
-  
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | From the kit                                                      | Side load fragility |
-    | Polybutylene Terephthalate for housing                            |                     |
-    |                                                                   |                     |
+   * $0.1
+   * [Link to product](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
+   * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
+ 
+   | Pros                                                              | Cons                |
+   | ----------------------------------------------------------------- | ------------------- |
+   | Inexpensive                                                     | requires a bulky battery pack |
+   | compact                                                      |                     |
+   | Ideal for exploration devices not connected to a wall   |                     |
