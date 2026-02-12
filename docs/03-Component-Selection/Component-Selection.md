@@ -81,4 +81,82 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 **Rationale:** A clock oscillator is easier ...
 
+**Motors**
 
+1. M1N10FB11G 5V motor
+
+     <img width="200" height="200" alt="Screenshot 2025-10-21 220238" src="https://github.com/user-attachments/assets/f51a6bd4-771a-4e88-a692-95ec44e6323e" />
+
+
+    * $3.19/each
+    * [link to product]((https://www.digikey.com/en/products/detail/nmb-technologies-corporation/M1N10FB11G/2417078))
+
+    | Pros                                      | Cons                           |
+    | ----------------------------------------- | ------------------------------ |
+    | Inexpensive                               | Low torque                     |
+    | Perfectly matches 5V rail                 | Tendency to spike in amperage when turned on |
+    | Lightweight                               | Requires a diffrent Voltage regulator |
+    | Available for bulk order for replacements |                                |
+   
+2. SE15K1BTYJ 12V motor
+   
+    <img width="200" height="200" alt="Screenshot 2025-10-21 220755" src="https://github.com/user-attachments/assets/200d5539-51be-4632-ba1e-df6a95210c7f" />
+
+
+    * $9.24/each
+    * [Link to product](https://www.digikey.com/en/products/detail/nmb-technologies-corporation/SE15K1BTYJ/6021448)
+
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Higher Torque                                                     | Higher Price        |
+    | Small and compact                                                 | Requires a diffrent Voltage regulator |
+
+3. 2371 6V motor (Pololu)
+
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0165aa5f-2a6e-4fd3-abc3-cc830815b42e" />
+
+   * $23.95
+   * [Link to product](https://www.digikey.com/en/products/detail/pololu/2371/10450018?s=N4IgTCBcDa4MwHYCMACADgewDbYK4oBMBjFAWwwBcMAnEAXQF8g)
+
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Highest Torque                                                    | Higher Price        |
+    | Small and compact                                                 | Low RPM             |
+    | Doesn't require an additional power rail                          |                     |
+    | Lightweight                                                       |                     |
+    
+**Choice:** Option 3: 2371 6V motor (Pololu)
+
+**Rationale:** The 2371 6v motor by Pololu is perfect match for our 5v power rail and eliminates the need for an extra one, keeping the PCB design simple. It is lightweight and has the highest toque output, therefore saving cost and increasing productivity.
+
+**Power Supply**
+
+1. PJ-102AH
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/711629bb-e7f1-4532-80e1-d3b02cca3b3b" />
+
+
+
+   * $0.76
+   * [Link to product](https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | From the kit                                                      | Side load fragility |
+    | Polybutylene Terephthalate for housing                            |                     |
+    |                                                                   |                     |
+
+1. B2B-PH-K-S
+   
+  <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
+
+
+
+   * $0.76
+   * [Link to product](https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | From the kit                                                      | Side load fragility |
+    | Polybutylene Terephthalate for housing                            |                     |
+    |                                                                   |                     |
