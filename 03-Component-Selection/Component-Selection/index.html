@@ -630,24 +630,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -878,24 +860,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -941,45 +905,16 @@
 <p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your <strong>Selected</strong> the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)</p>
 <p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator">"Appendix - Component Selection Process - Actuator"</a> selection.</p>
 <hr>
-<blockquote>
-<p>Remove the following before submitting! Use them to present the selected components</p>
-</blockquote>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
 <p><strong>Motor Driver</strong></p>
 <ol>
 <li>
-<p>DRV8220DRLR surface mount crystal</p>
+<p>DRV8220DRLR </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed"></a></p>
 <ul>
 <li>$0.77/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783">link to product</a></li>
 <li>
-<p><a href="https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783">link to product</a></p>
+<p><a href="https://www.ti.com/lit/ds/symlink/drv8220.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&amp;ts=1770814307427">Datasheet</a></p>
 <p><br></p>
 </li>
 </ul>
@@ -997,12 +932,47 @@
 </tr>
 <tr>
 <td>Meets surface mount constraint of project</td>
-<td>Needs special PCB layout.</td>
+<td></td>
+</tr>
+<tr>
+<td>H-Bridge let's both motors run simultaneously</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </li>
+<li>
+<p>DRV2603RUNR</p>
+</li>
 </ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/03f1cd0b-138a-411b-8144-3253873f775b" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/03f1cd0b-138a-411b-8144-3253873f775b"></a></p>
+<pre><code>* $0.56/each
+* [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
+* [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
+
+  &lt;br&gt;
+
+| Pros                                      | Cons                                                             |
+| ----------------------------------------- | ---------------------------------------------------------------- |
+| Inexpensive                               | Requires external components and support circuitry for interface |
+| Meets surface mount constraint of project |                                                        |
+| H-Bridge let's both motors run simultaneously | |
+</code></pre>
+<ol>
+<li>MP6513LGJ-Z</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/16af8c19-f7d3-4885-82ca-ab118397d909" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/16af8c19-f7d3-4885-82ca-ab118397d909"></a></p>
+<pre><code>* $0.83/each
+* [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
+* [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
+
+
+
+| Pros                                      | Cons                                                             |
+| ----------------------------------------- | ---------------------------------------------------------------- |
+| Inexpensive                               | Requires external components and support circuitry for interface |
+| Meets surface mount constraint of project | Cannot run both motors simultaneously                 |
+</code></pre>
 <p><strong>Rationale:</strong> A clock oscillator is easier ...</p>
 
 
