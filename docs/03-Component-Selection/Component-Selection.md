@@ -51,7 +51,7 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 1. DRV8220DRLR surface mount crystal
 
-    <img width="428" height="331" alt="image" src="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed" />
+    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed" />
 
     * $0.77/each
     * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783)
