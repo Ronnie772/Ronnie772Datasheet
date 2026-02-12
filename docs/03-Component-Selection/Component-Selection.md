@@ -42,6 +42,10 @@ title: Module's Selected Major Components
 
 -----------
 
+**Voltage Regulator**
+
+**Battery**
+
 ### Actuator
 
 **Motor Driver**
@@ -146,3 +150,8 @@ title: Module's Selected Major Components
 
 -----------
 
+**FINAL COMPONENT SELECTION**
+
+**Estimated Total Core Component Cost:**
+
+**Cost Discussion**
