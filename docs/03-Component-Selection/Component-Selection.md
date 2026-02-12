@@ -27,41 +27,58 @@ For more details, review the ["Appendix - Component Selection Process - Sensor"]
 For more details, review the ["Appendix - Component Selection Process - Actuator"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator) selection.
 
 -----------
-> Remove the following before submitting! Use them to present the selected components
 
-### Style 1
-
-> This is the example found in the assignment, uses more html
-
-*Table 1: Example component selection*
-
-**External Clock Module**
-
-| **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
-
-**Rationale:** A clock oscillator is easier ....
-
-### Style 2
-
-> Also acceptable, more markdown friendly
 
 **Motor Driver**
 
-1. DRV8220DRLR surface mount crystal
+1. DRV8220DRLR 
 
     <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed" />
 
     * $0.77/each
     * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783)
+    * [Datasheet](https://www.ti.com/lit/ds/symlink/drv8220.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1770814307427)
 
         <br>
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Meets surface mount constraint of project | Needs special PCB layout.                                        |
+    | Meets surface mount constraint of project |                                                        |
+    | H-Bridge let's both motors run simultaneously | |
+    
+2. DRV2603RUNR
+
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/03f1cd0b-138a-411b-8144-3253873f775b" />
+
+    * $0.56/each
+    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
+    * [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
+
+      <br>
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Inexpensive                               | Requires external components and support circuitry for interface |
+    | Meets surface mount constraint of project |                                                        |
+    | H-Bridge let's both motors run simultaneously | |
+
+3. MP6513LGJ-Z
+
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/16af8c19-f7d3-4885-82ca-ab118397d909" />
+
+    * $0.83/each
+    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
+    * [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
+
+
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Inexpensive                               | Requires external components and support circuitry for interface |
+    | Meets surface mount constraint of project | Cannot run both motors simultaneously                 |
     
 
 **Rationale:** A clock oscillator is easier ...
+
+
