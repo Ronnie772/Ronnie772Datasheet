@@ -148,16 +148,16 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 1. B2B-PH-K-S
    
-  <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
 
 
 
-   * $0.1
-   * [Link to product](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
-   * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
+    * $0.1
+    * [Link to product](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
+    * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
  
-   | Pros                                                              | Cons                |
-   | ----------------------------------------------------------------- | ------------------- |
-   | Inexpensive                                                     | requires a bulky battery pack |
-   | compact                                                      |                     |
-   | Ideal for exploration devices not connected to a wall   |                     |
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Inexpensive                                                     | requires a bulky battery pack |
+    | compact                                                      |                     |
+    | Ideal for exploration devices not connected to a wall   |                     |
