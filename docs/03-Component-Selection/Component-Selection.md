@@ -71,7 +71,7 @@ title: Module's Selected Major Components
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/03f1cd0b-138a-411b-8144-3253873f775b" />
 
     * $0.56/each
-    * [link to product]((https://www.digikey.com/en/products/detail/monolithic-power-systems-inc/mp6513lgj-z/7361426))
+    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
     * [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
 
       <br>
@@ -87,7 +87,7 @@ title: Module's Selected Major Components
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/16af8c19-f7d3-4885-82ca-ab118397d909" />
 
     * $0.83/each
-    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
+    * [link to product](https://www.digikey.com/en/products/detail/monolithic-power-systems-inc/mp6513lgj-z/7361426)
     * [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
 
 
