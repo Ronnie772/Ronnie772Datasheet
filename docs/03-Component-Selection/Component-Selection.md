@@ -50,13 +50,14 @@ title: Module's Selected Major Components
 
 **Motor Driver**
 
-1. DRV8220DRLR 
+1. TC78H670FTG,EL 
 
-    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9c21f797-13c4-4860-aaec-24c6caca18ed" />
+    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/f63e0997-3339-4b0f-9176-77ec0daef7d2" />
 
-    * $0.77/each
-    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV8220DRLR/15295783)
-    * [Datasheet](https://www.ti.com/lit/ds/symlink/drv8220.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1770814307427)
+
+    * $1.29/each
+    * [link to product](https://www.digikey.com/en/products/detail/toshiba-semiconductor-and-storage/TC78H670FTG-EL/11568779)
+    * [Datasheet](https://toshiba.semicon-storage.com/info/TC78H670FTG_datasheet_en_20240529.pdf?did=68606&prodName=TC78H670FTG)
 
         <br>
 
@@ -64,7 +65,7 @@ title: Module's Selected Major Components
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Inexpensive                               | Requires external components and support circuitry for interface |
     | Meets surface mount constraint of project |                                                        |
-    | H-Bridge let's both motors run simultaneously | |
+    | 4 H-Bridges let both motors run simultaneously | |
     
 2. DRV2603RUNR
 
@@ -80,7 +81,7 @@ title: Module's Selected Major Components
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Inexpensive                               | Requires external components and support circuitry for interface |
     | Meets surface mount constraint of project |                                                        |
-    | H-Bridge let's both motors run simultaneously | |
+    
 
 3. MP6513LGJ-Z
 
