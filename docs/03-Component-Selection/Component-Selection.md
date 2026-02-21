@@ -24,7 +24,7 @@ title: Module's Selected Major Components
     | Polybutylene Terephthalate for housing                            |                     |
     |                                                                   |                     |
 
-1. B2B-PH-K-S
+2. B2B-PH-K-S
    
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
 
@@ -43,6 +43,41 @@ title: Module's Selected Major Components
 -----------
 
 **Voltage Regulator**
+
+1. LM340SX-5.0/NOPB
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/ed88d96f-62a4-4bf1-83b9-5cdf21e52dd0" />
+
+
+
+   * $1.8
+   * [Link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM340SX-5-0-NOPB/334903)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Light weight                                                     |  |
+    | surface mount                            |                     |
+    | Inexpensive                                                 |                     |
+
+   2. LM7805MPX/NOPB
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9066e320-51b6-4910-9ce8-d3e6d72feb66" />
+
+
+
+
+   * $1.43
+   * [Link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM7805MPX-NOPB/6110583)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Light weight                                                     |  |
+    | surface mount                            |                     |
+    | Inexpensive                                                 |                     |
+
+
+
+
 
 **Battery**
 
