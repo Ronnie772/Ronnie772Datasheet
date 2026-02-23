@@ -102,13 +102,13 @@ title: Module's Selected Major Components
     | Meets surface mount constraint of project |                                                        |
     | 4 H-Bridges let both motors run simultaneously | |
     
-2. DRV2603RUNR
+2. TB6612FNG,C,8,EL
 
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/03f1cd0b-138a-411b-8144-3253873f775b" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/6f7ffedf-4cca-4a51-afae-f16fcfa72926" />
 
-    * $0.56/each
-    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/DRV2603RUNR/3487230)
-    * [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
+    * $1.82/each
+    * [link to product](https://www.digikey.com/en/products/detail/toshiba-semiconductor-and-storage/tb6612fng-c-8-el/1730070)
+    * [Datasheet](https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG)
 
       <br>
 
