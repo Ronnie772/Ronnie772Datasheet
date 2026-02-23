@@ -118,20 +118,20 @@ title: Module's Selected Major Components
     | Meets surface mount constraint of project |                                                        |
     
 
-3. MP6513LGJ-Z
+3. TC78H620FNG,EL
 
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/16af8c19-f7d3-4885-82ca-ab118397d909" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/49882959-2c78-4c99-8b9a-53767750feca" />
 
-    * $0.83/each
-    * [link to product](https://www.digikey.com/en/products/detail/monolithic-power-systems-inc/mp6513lgj-z/7361426)
-    * [Datasheet](https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fdrv2603)
+    * $1.37/each
+    * [link to product](https://www.digikey.com/en/products/detail/toshiba-semiconductor-and-storage/TC78H620FNG-EL/7056845)
+    * [Datasheet](https://toshiba.semicon-storage.com/info/TC78H620FNG_datasheet_en_20161125.pdf?did=35802&prodName=TC78H620FNG)
 
 
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Meets surface mount constraint of project | Cannot run both motors simultaneously                 |
+    | Meets surface mount constraint of project |                  |
     
 
 **Rationale:** A clock oscillator is easier ...
