@@ -7,7 +7,8 @@ title: Module Schematic
 This schematic is design to support .... (highlight functionally, power, and controller).
 
 
-<img width="1761" height="731" alt="image" src="https://github.com/user-attachments/assets/62793eea-126d-4036-a84f-92dba4a56bde" />
+  <img width="2423" height="1007" alt="image" src="https://github.com/user-attachments/assets/351f6c98-c7e3-4241-901c-276f24995327" />
+
 
 **Figure #1:** Showing the acuator subsystem schematic.
 
