@@ -15,4 +15,5 @@ This schematic is design to support .... (highlight functionally, power, and con
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25455032/egr314-design-RSC.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25531595/egr314-design-RSC.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+
