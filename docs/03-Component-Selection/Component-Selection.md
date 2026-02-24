@@ -134,7 +134,7 @@ title: Module's Selected Major Components
     | Meets surface mount constraint of project |                  |
     
 
-**Rationale:** A clock oscillator is easier ...
+**Rationale:** TB6612FNG offers the ability to control both motors at the same time.
 
 **Motors**
 
