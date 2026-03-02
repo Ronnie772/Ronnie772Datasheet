@@ -33,12 +33,13 @@ title: Module's Selected Major Components
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/8b8dd72f-71a5-4f85-a9cb-f8a7e65900d0" />
 
 
-
-
-    * $0.1 + $15.90
+    * $0.1 + $15.90 = $16.00
     * [Link to Connector](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
+
     * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
+    
     * [Link to Battery](https://www.amazon.com/Lithium-Phosphate-Rechargeable-Finder%EF%BC%8CSolar-Power%EF%BC%8CLighting/dp/B0FCFZG7DT/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.epXGzo8FsNt1y2_G6wONvw1iaezVhTSsgBSTFPfxOoqL1cX_7zGMKf1OxGhpjTkj9fnasNVLuNBlQnkL8LG-0Fvvg5rB7DWij5ftNlOp33r8k4n5Kh2daTrzSNWU-DtWACcIt5VF9Jhgl1K5TIouaerkmximUqlSlSPhwGbZUvNXddM6lQgO0gUuQD6e2My4UicDeqa6gPtQk6EM42gUkSdG5XK0-nU-oyyIz1FoHEzlv7opVrhcJZErL3AnCojV86FUs6uQjUVZtljXX9Sl333RM5u_yCV0soOs9y0lb8Q.6eJ2q7pJ18EDjaerDNjv_jqXJXLy9282huhEln4zFAE&dib_tag=se&keywords=lithium%2Bion%2Bbatteries%2B12V&qid=1772412366&s=automotive&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
+
  
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
