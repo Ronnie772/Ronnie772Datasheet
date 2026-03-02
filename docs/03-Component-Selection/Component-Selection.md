@@ -75,7 +75,22 @@ title: Module's Selected Major Components
     | surface mount                            |                     |
     | Inexpensive                                                 |                     |
 
+3. AP63203WU-7
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/d2e583f1-2c1e-49d2-84d6-fad8ae98f3c9" />
 
+
+
+
+
+   * $0.71
+   * [Link to product](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLljItgRzsVnNO3-5qPvu9sOfC&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgn7K4gVE3J7ADv3_Q5YxXXt60sMg7ncnEewleIUWCqzGQ6boCWI1fQaAiB6EALw_wcB)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Light weight                                                     |  |
+    | surface mount                            |                     |
+    | Inexpensive                                                 |                     |
 
 
 
