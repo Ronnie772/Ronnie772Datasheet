@@ -40,12 +40,12 @@ title: Module's Selected Major Components
 )
 
 
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Inexpensive                                                     | requires a bulky battery pack |
-    | compact                                                      |                     |
-    | Ideal for exploration devices not connected to a wall   |                     |
-    | Allows for a wireless powering system |    |
+     | Pros                                                              | Cons                |
+     | ----------------------------------------------------------------- | ------------------- |
+     | Inexpensive                                                     | requires a bulky battery pack |
+     | compact                                                      |                     |
+     | Ideal for exploration devices not connected to a wall   |                     |
+     | Allows for a wireless powering system |    |
 
 
 **Choice:** Option 2: B2B-PH-K-S + battery
