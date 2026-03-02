@@ -7,7 +7,7 @@ title: Module Schematic
 This schematic is design to support .... (highlight functionally, power, and controller).
 
 
-  <img width="2374" height="1010" alt="image" src="https://github.com/user-attachments/assets/4bff15de-d37f-432b-8a7d-f579edc53a51" />
+  <img width="2381" height="1008" alt="image" src="https://github.com/user-attachments/assets/e96eafe1-5868-4200-99ee-2e6b05ab60d9" />
 
 
 
@@ -16,5 +16,6 @@ This schematic is design to support .... (highlight functionally, power, and con
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25531595/egr314-design-RSC.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25671294/egr314-design-RSC.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+
 
