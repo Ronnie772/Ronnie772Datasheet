@@ -47,6 +47,10 @@ title: Module's Selected Major Components
     | Ideal for exploration devices not connected to a wall   |                     |
     | Allows for a wireless powering system |    |
 
+
+**Choice:** Option 2: B2B-PH-K-S + battery
+
+**Rationale:** 
 -----------
 
 **Voltage Regulator (3.3V)**
@@ -101,7 +105,9 @@ title: Module's Selected Major Components
     | surface mount                            |                     |
     | Inexpensive                                                 |                     |
 
+**Choice:** Option 3: AP63203WU-7
 
+**Rationale:**
 
 **Voltage Regulator (6V)**
 
@@ -122,7 +128,9 @@ title: Module's Selected Major Components
     | Inexpensive                                                 |                     |
     | Eliminates the need for a secondary battery for motors |  |
 
+**Choice:** Option 1: L7806ABD2T-TR 
 
+**Rationale:**
 
 ### Actuator
 
