@@ -59,7 +59,8 @@ title: Module's Selected Major Components
     | surface mount                            |                     |
     | Inexpensive                                                 |                     |
 
-   2. LM7805MPX/NOPB
+
+2. LM7805MPX/NOPB
    
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9066e320-51b6-4910-9ce8-d3e6d72feb66" />
 
@@ -74,6 +75,7 @@ title: Module's Selected Major Components
     | Light weight                                                     |  |
     | surface mount                            |                     |
     | Inexpensive                                                 |                     |
+
 
 3. AP63203WU-7
    
