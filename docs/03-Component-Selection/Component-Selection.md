@@ -28,6 +28,8 @@ title: Module's Selected Major Components
    
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
 
+   <br>
+
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/8b8dd72f-71a5-4f85-a9cb-f8a7e65900d0" />
 
 
