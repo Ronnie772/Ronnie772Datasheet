@@ -49,7 +49,7 @@ title: Module's Selected Major Components
 
 -----------
 
-**Voltage Regulator**
+**Voltage Regulator (3.3V)**
 
 1. LM340SX-5.0/NOPB
    
@@ -103,7 +103,26 @@ title: Module's Selected Major Components
 
 
 
-**Battery**
+**Voltage Regulator (6V)**
+
+1. L7806ABD2T-TR
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/5440bc12-b84d-45bc-b3d2-7c09c83263a5" />
+
+
+
+
+   * $0.96
+   * [Link to product](https://www.digikey.com/en/products/detail/stmicroelectronics/L7806ABD2T-TR/585696)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Light weight                                                     |  |
+    | surface mount                            |                     |
+    | Inexpensive                                                 |                     |
+    | Eliminates the need for a secondary battery for motors |  |
+
+
 
 ### Actuator
 
