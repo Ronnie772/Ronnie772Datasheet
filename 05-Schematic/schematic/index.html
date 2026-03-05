@@ -909,7 +909,12 @@
   <h1>Module Schematic</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This schematic is design to support .... (highlight functionally, power, and controller).</p>
+<p>This schematic defines the complete motor control subsystem, including power regulation, microcontroller control logic, override inputs, and the H-bridge motor driver. The design distributes power from a 12 V battery to both the control electronics and the motors while maintaining stable operating voltages for each subsystem.</p>
+<p>The power supply section generates the required regulated rails. A 3.3 V switching regulator (AP63203WU-7) provides the logic supply used by the PIC18F47K42 microcontroller, control inputs, and other digital circuitry. A separate 6 V linear regulator (L7806ABD2T) supplies the motor driver’s VM input and the motors themselves. Decoupling capacitors are included around the regulators and major ICs to reduce electrical noise and ensure stable voltage levels.</p>
+<p>The PIC18F47K42 microcontroller acts as the central controller for the subsystem. It is programmed through the Microchip SNAP ICSP interface and operates from the regulated 3.3 V rail. The microcontroller generates PWM outputs for motor speed control and digital signals that determine motor direction. Additional header connections allow communication with other subsystems and provide access for debugging and expansion.</p>
+<p>Two override switches are included to support testing and system safety checks. These switches provide 3.3 V digital signals that can override or supplement the microcontroller control inputs during diagnostic operation.</p>
+<p>The motor driver (H-bridge) receives PWM and digital control signals from the microcontroller and converts them into higher-current outputs capable of driving the two DC motors. Bypass capacitors near the driver help suppress switching noise produced by the motors.</p>
+<p>Overall, this schematic integrates regulated power distribution, microcontroller-based control, and hardware override capability to provide reliable bidirectional motor control while supporting system testing and integration with the broader platform</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/e96eafe1-5868-4200-99ee-2e6b05ab60d9" data-desc-position="bottom"><img width="2381" height="1008" alt="image" src="https://github.com/user-attachments/assets/e96eafe1-5868-4200-99ee-2e6b05ab60d9"></a></p>
 <p><strong>Figure #1:</strong> Showing the acuator subsystem schematic.</p>
 <h2 id="resouces">Resouces</h2>
