@@ -44,6 +44,21 @@ title: Module's Selected Major Components
      | Allows for a wireless powering system                   | requires a bulky battery pack |
      | compact                                                      |                     |
 
+3. USB Type-C Receptacle
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/d363abe3-7112-42bb-bbe2-0b09c801fcc9" />
+
+
+
+   * $0.78
+   * [Link to product](https://tinyurl.com/mwn8w959)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Inexpensive                                                     | Requires CC resistors or PD controller configuration |
+    | Compact                                                          | Wired connection |
+    |                                                                   | More complex routing |
+
 
 **Choice:** Option 2: B2B-PH-K-S + battery
 
@@ -52,35 +67,35 @@ title: Module's Selected Major Components
 
 **Voltage Regulator (3.3V)**
 
-1. LM340SX-5.0/NOPB
+1. TI TPS62840DLCR
    
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/ed88d96f-62a4-4bf1-83b9-5cdf21e52dd0" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/8079f197-14c4-4a89-ad6d-ac629198c0c7" />
 
 
 
-   * $1.8
-   * [Link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM340SX-5-0-NOPB/334903)
+   * $2.08
+   * [Link to product](https://www.digikey.com/en/products/detail/microchip-technology/MCP1640B-I-MC/2258562)
   
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
-    | Light weight                                                     |  |
-    | surface mount                            |                     |
+    |  Lower heat generation compared to basic buck regulators | Higher cost |
+    | surface mount                            | Increased PCB complexity |
     | Inexpensive                                                 |                     |
 
 
-2. LM7805MPX/NOPB
+2. MCP1640B Boost + LDO Combination (PMIC-style approach)
    
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9066e320-51b6-4910-9ce8-d3e6d72feb66" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/2168cf4c-ec8e-4b30-80e9-49f8b7691f25" />
 
 
 
 
-   * $1.43
-   * [Link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM7805MPX-NOPB/6110583)
+   * $0.81
+   * [Link to product](https://www.digikey.com/en/products/detail/microchip-technology/MCP1640B-I-MC/2258562)
   
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
-    | Light weight                                                     |  |
+    | Flexible voltage configuration                                   | Larger PCB footprint |
     | surface mount                            |                     |
     | Inexpensive                                                 |                     |
 
@@ -98,9 +113,8 @@ title: Module's Selected Major Components
   
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
-    | Light weight                                                     |  |
+    | Inexpensive | Moderate efficiency under higher load |
     | surface mount                            |                     |
-    | Inexpensive                                                 |                     |
 
 **Choice:** Option 3: AP63203WU-7
 
@@ -124,6 +138,37 @@ title: Module's Selected Major Components
     | surface mount                            |                     |
     | Inexpensive                                                 |                     |
     | Eliminates the need for a secondary battery for motors |  |
+
+
+2. R1173H001B-T1-FE
+   
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/fd5982f8-6622-49c0-b57e-c7fda4734e8e" />
+
+
+
+   * $1.06
+   * [Link to product](https://www.digikey.com/en/products/detail/nisshinbo-micro-devices-inc/R1173H001B-T1-FE/10244877)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | surface mount                                              | Low current output |
+    | Inexpensive                                                 | Low maximum input voltage |
+
+3. NJM2887DL3-TE1
+   
+   <img width="438" height="247" alt="image" src="https://github.com/user-attachments/assets/82df19c4-4e3a-4048-9fe0-111b9cfc301e" />
+
+
+
+   * $0.5
+   * [Link to product](https://tinyurl.com/39h2whdx)
+  
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | surface mount                            | Low current output |
+    | Inexpensive                                                 | Only available in bulk orders |
+
+
 
 **Choice:** Option 1: L7806ABD2T-TR 
 
