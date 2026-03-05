@@ -20,6 +20,7 @@ Things to mention are:
 
 ## Block Diagram 
 
-<img width="1141" height="612" alt="block-diagram-RSC-EGR314 drawio" src="https://github.com/user-attachments/assets/7b064346-0b84-4caf-9472-c8afb843618e" />
+
+  <img width="1041" height="612" alt="block-diagram-RSC-EGR314 drawio" src="https://github.com/user-attachments/assets/ed085b2f-8801-4069-801c-f391875d7939" />
 
 
