@@ -62,7 +62,7 @@ title: Module's Selected Major Components
 
 **Choice:** Option 2: B2B-PH-K-S + battery
 
-**Rationale:** 
+**Rationale:** This option was selected because it enables the system to operate using a battery-powered wireless power source, removing the need for a continuous wired power connection. A battery pack improves portability and flexibility, which is beneficial for mobile or embedded systems. Although the battery pack increases the physical size of the system, the advantage of independent operation and simplified power distribution outweighs the drawback of additional bulk. The connector also provides a secure electrical interface for delivering power to the rest of the circuit. 
 -----------
 
 **Voltage Regulator (3.3V)**
@@ -118,7 +118,7 @@ title: Module's Selected Major Components
 
 **Choice:** Option 3: AP63203WU-7
 
-**Rationale:**
+**Rationale:**The AP63203WU-7 switching regulator was selected because it provides an efficient and compact method for stepping down voltage to 3.3V, which is required for many digital components. Compared to traditional linear regulators, this device offers better efficiency and reduced heat generation, particularly under moderate load conditions. Its surface-mount design reduces board space, helping keep the PCB compact. While efficiency decreases at higher loads, the regulator still provides a cost-effective and reliable solution for powering low-voltage electronics in the module.
 
 **Voltage Regulator (6V)**
 
@@ -172,7 +172,7 @@ title: Module's Selected Major Components
 
 **Choice:** Option 1: L7806ABD2T-TR 
 
-**Rationale:**
+**Rationale:**The L7806AB2T-TR linear voltage regulator was selected to provide a stable 6V supply rail for components that require a higher operating voltage, such as motors. This regulator is lightweight, inexpensive, and available in a surface-mount package, making it easy to integrate into the PCB design. It also eliminates the need for a separate motor battery by converting the input supply to a regulated 6V output. Although linear regulators are less efficient than switching regulators, the simplicity, reliability, and low cost make this component a practical choice for the system's motor power requirements.
 
 ### Actuator
 
@@ -227,7 +227,10 @@ title: Module's Selected Major Components
     | Meets surface mount constraint of project |                  |
     
 
-**Rationale:** TB6612FNG offers the ability to control both motors at the same time.
+
+**Choice:** Option 2: TB6612FNG
+**Rationale:** The TB6612FNG motor driver was chosen because it provides dual H-bridge functionality, allowing the system to control two motors simultaneously with forward and reverse direction control. This capability simplifies the circuit by integrating multiple driver functions into a single IC. The component is also inexpensive and available in a surface-mount package, making it compatible with the project's PCB constraints. While the driver requires additional external components for interface support, its ability to efficiently control motors and handle bidirectional current makes it well-suited for actuator control within the module.
+
 
 **Motors**
 
@@ -275,12 +278,23 @@ title: Module's Selected Major Components
     
 **Choice:** Option 3: 2371 6V motor (Pololu)
 
-**Rationale:** The 2371 6v motor by Pololu is perfect match for our 5v power rail and eliminates the need for an extra one, keeping the PCB design simple. It is lightweight and has the highest toque output, therefore saving cost and increasing productivity.
+**Rationale:**The Pololu 2371 6V motor was selected because it offers the highest torque output among the evaluated options, improving system performance and reliability during mechanical operation. The motor is small, lightweight, and compact, allowing it to fit easily within the design constraints of the module. Additionally, it operates directly from the existing 6V power rail, eliminating the need for an additional voltage regulator and simplifying the power architecture of the system. These advantages make it the most effective choice for delivering reliable actuation while maintaining an efficient and simple circuit design.
 
 -----------
 
 **FINAL COMPONENT SELECTION**
 
+ | Subsystem | component | 
+ | voltage regulator (3.3V) | AP63203WU-7 |
+ | voltage regulator (6V) | L7806ABD2T-TR  |
+ | power supply | B2B-PH-K-S + Battery |
+ | motor driver | TB6612FNG |
+ | motor | 2371 6V motor (Pololu) |
+
 **Estimated Total Core Component Cost:**
 
+AP63203WU-7 (0.71) + L7806ABD2T-TR (0.96) + B2B-PH-K-S + Battery (16) + TB6612FNG (1.82) + 2371 6V motor (Pololu) (23.95) = $43.44
+
 **Cost Discussion**
+
+The selected components were chosen to balance cost, efficiency, and performance. Most of the components are inexpensive and widely available, ensuring that the total system cost remains low while maintaining reliable operation. The use of integrated components such as the TB6612FNG motor driver and AP63203 switching regulator reduces the number of external components required, which simplifies the PCB design and further lowers manufacturing costs. Although certain components, such as the Pololu motor, have a higher individual price, their improved performance and reliability justify the cost by enhancing the overall functionality of the system.
