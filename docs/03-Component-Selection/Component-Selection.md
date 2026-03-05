@@ -118,7 +118,7 @@ title: Module's Selected Major Components
 
 **Choice:** Option 3: AP63203WU-7
 
-**Rationale:**The AP63203WU-7 switching regulator was selected because it provides an efficient and compact method for stepping down voltage to 3.3V, which is required for many digital components. Compared to traditional linear regulators, this device offers better efficiency and reduced heat generation, particularly under moderate load conditions. Its surface-mount design reduces board space, helping keep the PCB compact. While efficiency decreases at higher loads, the regulator still provides a cost-effective and reliable solution for powering low-voltage electronics in the module.
+**Rationale:** The AP63203WU-7 switching regulator was selected because it provides an efficient and compact method for stepping down voltage to 3.3V, which is required for many digital components. Compared to traditional linear regulators, this device offers better efficiency and reduced heat generation, particularly under moderate load conditions. Its surface-mount design reduces board space, helping keep the PCB compact. While efficiency decreases at higher loads, the regulator still provides a cost-effective and reliable solution for powering low-voltage electronics in the module.
 
 **Voltage Regulator (6V)**
 
@@ -172,7 +172,7 @@ title: Module's Selected Major Components
 
 **Choice:** Option 1: L7806ABD2T-TR 
 
-**Rationale:**The L7806AB2T-TR linear voltage regulator was selected to provide a stable 6V supply rail for components that require a higher operating voltage, such as motors. This regulator is lightweight, inexpensive, and available in a surface-mount package, making it easy to integrate into the PCB design. It also eliminates the need for a separate motor battery by converting the input supply to a regulated 6V output. Although linear regulators are less efficient than switching regulators, the simplicity, reliability, and low cost make this component a practical choice for the system's motor power requirements.
+**Rationale:** The L7806AB2T-TR linear voltage regulator was selected to provide a stable 6V supply rail for components that require a higher operating voltage, such as motors. This regulator is lightweight, inexpensive, and available in a surface-mount package, making it easy to integrate into the PCB design. It also eliminates the need for a separate motor battery by converting the input supply to a regulated 6V output. Although linear regulators are less efficient than switching regulators, the simplicity, reliability, and low cost make this component a practical choice for the system's motor power requirements.
 
 ### Actuator
 
@@ -278,7 +278,7 @@ title: Module's Selected Major Components
     
 **Choice:** Option 3: 2371 6V motor (Pololu)
 
-**Rationale:**The Pololu 2371 6V motor was selected because it offers the highest torque output among the evaluated options, improving system performance and reliability during mechanical operation. The motor is small, lightweight, and compact, allowing it to fit easily within the design constraints of the module. Additionally, it operates directly from the existing 6V power rail, eliminating the need for an additional voltage regulator and simplifying the power architecture of the system. These advantages make it the most effective choice for delivering reliable actuation while maintaining an efficient and simple circuit design.
+**Rationale:** The Pololu 2371 6V motor was selected because it offers the highest torque output among the evaluated options, improving system performance and reliability during mechanical operation. The motor is small, lightweight, and compact, allowing it to fit easily within the design constraints of the module. Additionally, it operates directly from the existing 6V power rail, eliminating the need for an additional voltage regulator and simplifying the power architecture of the system. These advantages make it the most effective choice for delivering reliable actuation while maintaining an efficient and simple circuit design.
 
 -----------
 
