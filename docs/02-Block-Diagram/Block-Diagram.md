@@ -21,7 +21,5 @@ Things to mention are:
 ## Block Diagram 
 
 
- 
-  <img width="1051" height="611" alt="block-diagram-RSC-EGR314 drawio" src="https://github.com/user-attachments/assets/f69a97bd-7830-4d4b-b863-9a7985a0d69e" />
-
+  <img width="1051" height="611" alt="block-diagram-RSC-EGR314 drawio" src="https://github.com/user-attachments/assets/ff3acfe6-e9a6-4871-b87e-5621e06da754" />
 
