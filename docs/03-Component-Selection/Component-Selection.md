@@ -21,7 +21,7 @@ title: Module's Selected Major Components
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
     | Inexpensive                                                     | Side load fragility |
-    | Polybutylene Terephthalate for housing                            |                     |
+    | Polybutylene Terephthalate for housing                            | Wired connection |
     |                                                                   |                     |
 
 2. B2B-PH-K-S + battery
@@ -41,10 +41,8 @@ title: Module's Selected Major Components
 
      | Pros                                                              | Cons                |
      | ----------------------------------------------------------------- | ------------------- |
-     | Inexpensive                                                     | requires a bulky battery pack |
+     | Allows for a wireless powering system                   | requires a bulky battery pack |
      | compact                                                      |                     |
-     | Ideal for exploration devices not connected to a wall   |                     |
-     | Allows for a wireless powering system |    |
 
 
 **Choice:** Option 2: B2B-PH-K-S + battery
