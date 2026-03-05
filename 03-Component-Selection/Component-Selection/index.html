@@ -1020,17 +1020,14 @@
  | Allows for a wireless powering system                   | requires a bulky battery pack |
  | compact                                                      |                     |
 </code></pre>
-<p><strong>Choice:</strong> Option 2: B2B-PH-K-S + battery</p>
-<h2 id="rationale"><strong>Rationale:</strong></h2>
-<p><strong>Voltage Regulator (3.3V)</strong></p>
 <ol>
-<li>LM340SX-5.0/NOPB</li>
+<li>USB Type-C Receptacle</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/ed88d96f-62a4-4bf1-83b9-5cdf21e52dd0" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/ed88d96f-62a4-4bf1-83b9-5cdf21e52dd0"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d363abe3-7112-42bb-bbe2-0b09c801fcc9" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/d363abe3-7112-42bb-bbe2-0b09c801fcc9"></a></p>
 <ul>
-<li>$1.8</li>
+<li>$0.78</li>
 <li>
-<p><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM340SX-5-0-NOPB/334903">Link to product</a></p>
+<p><a href="https://tinyurl.com/mwn8w959">Link to product</a></p>
 <table>
 <thead>
 <tr>
@@ -1040,12 +1037,47 @@
 </thead>
 <tbody>
 <tr>
-<td>Light weight</td>
+<td>Inexpensive</td>
+<td>Requires CC resistors or PD controller configuration</td>
+</tr>
+<tr>
+<td>Compact</td>
+<td>Wired connection</td>
+</tr>
+<tr>
 <td></td>
+<td>More complex routing</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><strong>Choice:</strong> Option 2: B2B-PH-K-S + battery</p>
+<h2 id="rationale"><strong>Rationale:</strong></h2>
+<p><strong>Voltage Regulator (3.3V)</strong></p>
+<ol>
+<li>TI TPS62840DLCR</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/8079f197-14c4-4a89-ad6d-ac629198c0c7" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/8079f197-14c4-4a89-ad6d-ac629198c0c7"></a></p>
+<ul>
+<li>$2.08</li>
+<li>
+<p><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP1640B-I-MC/2258562">Link to product</a></p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lower heat generation compared to basic buck regulators</td>
+<td>Higher cost</td>
 </tr>
 <tr>
 <td>surface mount</td>
-<td></td>
+<td>Increased PCB complexity</td>
 </tr>
 <tr>
 <td>Inexpensive</td>
@@ -1055,14 +1087,14 @@
 </table>
 </li>
 <li>
-<p>LM7805MPX/NOPB</p>
+<p>MCP1640B Boost + LDO Combination (PMIC-style approach)</p>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/9066e320-51b6-4910-9ce8-d3e6d72feb66" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/9066e320-51b6-4910-9ce8-d3e6d72feb66"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/2168cf4c-ec8e-4b30-80e9-49f8b7691f25" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/2168cf4c-ec8e-4b30-80e9-49f8b7691f25"></a></p>
 <ul>
-<li>$1.43</li>
+<li>$0.81</li>
 <li>
-<p><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM7805MPX-NOPB/6110583">Link to product</a></p>
+<p><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP1640B-I-MC/2258562">Link to product</a></p>
 <table>
 <thead>
 <tr>
@@ -1072,8 +1104,8 @@
 </thead>
 <tbody>
 <tr>
-<td>Light weight</td>
-<td></td>
+<td>Flexible voltage configuration</td>
+<td>Larger PCB footprint</td>
 </tr>
 <tr>
 <td>surface mount</td>
@@ -1104,15 +1136,11 @@
 </thead>
 <tbody>
 <tr>
-<td>Light weight</td>
-<td></td>
+<td>Inexpensive</td>
+<td>Moderate efficiency under higher load</td>
 </tr>
 <tr>
 <td>surface mount</td>
-<td></td>
-</tr>
-<tr>
-<td>Inexpensive</td>
 <td></td>
 </tr>
 </tbody>
@@ -1153,6 +1181,62 @@
 <tr>
 <td>Eliminates the need for a secondary battery for motors</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>R1173H001B-T1-FE</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/fd5982f8-6622-49c0-b57e-c7fda4734e8e" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/fd5982f8-6622-49c0-b57e-c7fda4734e8e"></a></p>
+<ul>
+<li>$1.06</li>
+<li>
+<p><a href="https://www.digikey.com/en/products/detail/nisshinbo-micro-devices-inc/R1173H001B-T1-FE/10244877">Link to product</a></p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>surface mount</td>
+<td>Low current output</td>
+</tr>
+<tr>
+<td>Inexpensive</td>
+<td>Low maximum input voltage</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>NJM2887DL3-TE1</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/82df19c4-4e3a-4048-9fe0-111b9cfc301e" data-desc-position="bottom"><img width="438" height="247" alt="image" src="https://github.com/user-attachments/assets/82df19c4-4e3a-4048-9fe0-111b9cfc301e"></a></p>
+<ul>
+<li>$0.5</li>
+<li>
+<p><a href="https://tinyurl.com/39h2whdx">Link to product</a></p>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>surface mount</td>
+<td>Low current output</td>
+</tr>
+<tr>
+<td>Inexpensive</td>
+<td>Only available in bulk orders</td>
 </tr>
 </tbody>
 </table>
