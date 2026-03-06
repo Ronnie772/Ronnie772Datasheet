@@ -24,25 +24,23 @@ title: Module's Selected Major Components
     | Polybutylene Terephthalate for housing                            | Wired connection |
     |                                                                   |                     |
 
-2. B2B-PH-K-S + battery
+2. Battery + Headers
    
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0c608c2b-a00e-46fa-8a63-660fc8f8542a" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/472dcf44-67b7-4367-90ff-4a1b7b7f861e" />
 
    <br>
 
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/8b8dd72f-71a5-4f85-a9cb-f8a7e65900d0" />
 
 
-    * $0.1 + $15.90 = $16.00
-    * [Link to Connector](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611)
-    * [Datasheet](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)   
+    * $15.90  
     * [Link to Battery](https://tinyurl.com/4jrj9ck6)
 
 
      | Pros                                                        | Cons                |
      | ----------------------------------------------------------- | ------------------- |
-     | Allows for a wireless powering system | requires a bulky battery pack |
-     | compact |  |
+     | Allows for a wireless powering system                       | requires a bulky battery pack |
+     | compact                                                     |                   |
 
 3. USB Type-C Receptacle
    
@@ -59,7 +57,7 @@ title: Module's Selected Major Components
     |                                                                   | More complex routing |
 
 
-**Choice:** Option 2: B2B-PH-K-S + battery 
+**Choice:** Option 2: Battery + Headers 
 
 **Rationale:**
       This option was selected because it enables the system to operate using a battery-powered wireless power source, removing the need for a continuous wired power connection. A battery pack improves portability and flexibility, which is beneficial for mobile or embedded systems. Although the battery pack increases the physical size of the system, the advantage of independent operation and simplified power distribution outweighs the drawback of additional bulk. The connector also provides a secure electrical interface for delivering power to the rest of the circuit.
@@ -290,13 +288,13 @@ title: Module's Selected Major Components
  | -------------- | ------------------- |
  | voltage regulator (3.3V) | AP63203WU-7 |
  | voltage regulator (6V) | L7806ABD2T-TR  |
- | power supply | B2B-PH-K-S + Battery |
+ | power supply | Battery + Headers |
  | motor driver | TB6612FNG |
  | motor | 2371 6V motor (Pololu) |
 
 **Estimated Total Core Component Cost:**
 
-AP63203WU-7 (0.71) + L7806ABD2T-TR (0.96) + B2B-PH-K-S + Battery (16) + TB6612FNG (1.82) + 2371 6V motor (Pololu) (23.95) = $43.44
+AP63203WU-7 (0.71) + L7806ABD2T-TR (0.96) + Battery + Headers (15.9) + TB6612FNG (1.82) + 2371 6V motor (Pololu) (23.95) = $43.34
 
 **Cost Discussion**
 
