@@ -158,7 +158,7 @@ title: Module's Selected Major Components
 
 3. NJM2887DL3-TE1
    
-   <img width="438" height="247" alt="image" src="https://github.com/user-attachments/assets/82df19c4-4e3a-4048-9fe0-111b9cfc301e" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/82df19c4-4e3a-4048-9fe0-111b9cfc301e" />
 
 
 
