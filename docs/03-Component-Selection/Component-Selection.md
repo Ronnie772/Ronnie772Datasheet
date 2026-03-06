@@ -39,15 +39,14 @@ title: Module's Selected Major Components
     * [Link to Battery](https://tinyurl.com/4jrj9ck6)
 
 
-     | Pros                                                              | Cons                |
-     | ----------------------------------------------------------------- | ------------------- |
-     | Allows for a wireless powering system                   | requires a bulky battery pack |
-     | compact                                                      |                     |
+     | Pros                                                        | Cons                |
+     | ----------------------------------------------------------- | ------------------- |
+     | Allows for a wireless powering system | requires a bulky battery pack |
+     | compact |  |
 
 3. USB Type-C Receptacle
    
    <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/d363abe3-7112-42bb-bbe2-0b09c801fcc9" />
-
 
 
    * $0.78
@@ -61,8 +60,7 @@ title: Module's Selected Major Components
 
 
 **Choice:** Option 2: B2B-PH-K-S + battery
-
-**Rationale:** This option was selected because it enables the system to operate using a battery-powered wireless power source, removing the need for a continuous wired power connection. A battery pack improves portability and flexibility, which is beneficial for mobile or embedded systems. Although the battery pack increases the physical size of the system, the advantage of independent operation and simplified power distribution outweighs the drawback of additional bulk. The connector also provides a secure electrical interface for delivering power to the rest of the circuit. 
+**Rational:** This option was selected because it enables the system to operate using a battery-powered wireless power source, removing the need for a continuous wired power connection. A battery pack improves portability and flexibility, which is beneficial for mobile or embedded systems. Although the battery pack increases the physical size of the system, the advantage of independent operation and simplified power distribution outweighs the drawback of additional bulk. The connector also provides a secure electrical interface for delivering power to the rest of the circuit.
 -----------
 
 **Voltage Regulator (3.3V)**
