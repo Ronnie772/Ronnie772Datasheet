@@ -61,7 +61,7 @@ title: Module's Selected Major Components
 
 **Choice:** Option 2: B2B-PH-K-S + battery
 
-**Rationale:**  This option was selected because it enables the system to operate using a battery-powered wireless power source, removing the need for a continuous wired power connection. A battery pack improves portability and flexibility, which is beneficial for mobile or embedded systems. Although the battery pack increases the physical size of the system, the advantage of independent operation and simplified power distribution outweighs the drawback of additional bulk. The connector also provides a secure electrical interface for delivering power to the rest of the circuit.
+**Rationale:** This option was selected because it enables the system to operate using a battery-powered wireless power source, removing the need for a continuous wired power connection. A battery pack improves portability and flexibility, which is beneficial for mobile or embedded systems. Although the battery pack increases the physical size of the system, the advantage of independent operation and simplified power distribution outweighs the drawback of additional bulk. The connector also provides a secure electrical interface for delivering power to the rest of the circuit.
 -----------
 
 **Voltage Regulator (3.3V)**
