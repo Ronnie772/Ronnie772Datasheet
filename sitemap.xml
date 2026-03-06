@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/03-Power-Budget/Power%20Budget/</loc>
+         <lastmod>2026-03-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/03-Power-Budget/Power-Budget/</loc>
          <lastmod>2026-03-06</lastmod>
          <changefreq>daily</changefreq>
