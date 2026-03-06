@@ -286,7 +286,8 @@ title: Module's Selected Major Components
 
 **FINAL COMPONENT SELECTION**
 
- | Subsystem | component | 
+ | Subsystem      | component           | 
+ | -------------- | ------------------- |
  | voltage regulator (3.3V) | AP63203WU-7 |
  | voltage regulator (6V) | L7806ABD2T-TR  |
  | power supply | B2B-PH-K-S + Battery |
