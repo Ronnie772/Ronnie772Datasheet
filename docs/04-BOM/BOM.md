@@ -22,6 +22,5 @@ As you can see, the text can be difficult to read without opening the image.
 
 ## Resouce
 
-The Bill of Material as a PDF download is available [*here*](https://github.com/user-attachments/files/25787683/B.O.M-egr314.pdf.pdf)
-[xlsx]()
-.
+The Bill of Material as a PDF download is available [*here*](https://github.com/user-attachments/files/25787683/B.O.M-egr314.pdf.pdf),
+xlsx file available [*here*](https://github.com/user-attachments/files/25787787/B.O.M-egr314-Raunak.Singh.xlsx)
