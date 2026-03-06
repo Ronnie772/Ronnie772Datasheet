@@ -11,7 +11,7 @@ The system uses three main power rails: 3.3V, 6V, and 12V. The 3.3V rail powers 
 The 12V battery serves as the primary external power source, supplying power to the voltage regulators that generate the lower voltage rails. After accounting for all component loads and safety margins, the system remains within the current capabilities of the selected regulators and battery, leaving additional current capacity available for safe operation and potential future expansion.  
   
   
- <img width="1087" height="876" alt="image" src="https://github.com/user-attachments/assets/3f5914a1-f282-4225-b7d3-8371c03f4bf7" />
+<img width="1097" height="874" alt="image" src="https://github.com/user-attachments/assets/adc71b59-fc9c-4876-a7dd-5efa4e63ebdd" />
 
 
 [Power Budget (egr334).pdf](https://github.com/user-attachments/files/25691557/Power.Budget.egr334.pdf),
