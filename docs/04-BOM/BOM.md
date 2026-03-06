@@ -6,7 +6,10 @@ tags:
 ---
 
 ## Overview
-Written context needs to added!
+
+The Bill of Materials (BOM) lists all components required to assemble the system, including power management components, control electronics, actuators, and supporting passive components. Key components include a 12V battery, 3.3V and 6V voltage regulators, a PIC18F47K42 microcontroller, a TB6612FNG motor driver, and two Pololu 2371 DC motors used for actuation. Additional resistors, capacitors, switches, and connectors ensure proper power regulation, signal stability, and system integration.
+
+Most components were sourced from DigiKey, Amazon, and Microchip, ensuring reliable availability and documented specifications. The total estimated cost of the system is approximately $97.00, with the motors representing the largest portion of the cost due to their performance and torque capabilities. The selected components balance cost, reliability, and functionality while meeting the electrical and mechanical requirements of the system.
 
  
 
