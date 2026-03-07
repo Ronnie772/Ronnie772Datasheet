@@ -20,8 +20,8 @@ Overall, this subsystem provides regulated power distribution, PWM-based motor s
 
 ## Block Diagram 
 
+  <img width="1051" height="631" alt="block-diagram-RSC-EGR314 drawio" src="https://github.com/user-attachments/assets/adfdbd10-c1cb-40b0-be46-57bde7d2f749" />
 
+Downloadable pdf available [*here*](https://github.com/user-attachments/files/25806928/block-diagram-RSC-EGR314.drawio.pdf)
 
-
-  <img width="1051" height="630" alt="block-diagram-RSC-EGR314 drawio (1)" src="https://github.com/user-attachments/assets/384f485a-f77f-453e-a3a7-6ca0616618f8" />
 
