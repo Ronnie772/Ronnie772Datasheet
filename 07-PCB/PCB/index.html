@@ -26,7 +26,7 @@
 
     
       
-        <title>PCB - EGR 314 Raunak Singh Data Sheet</title>
+        <title>Module PCB - EGR 314 Raunak Singh Data Sheet</title>
       
     
     
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PCB
+              Module PCB
             
           </span>
         </div>
@@ -778,15 +783,61 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Module PCB
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    PCB
+    Module PCB
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resouces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resouces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -872,6 +923,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resouces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resouces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -893,7 +970,20 @@
   
 
 
-  <h1>PCB</h1>
+  <h1>Module PCB</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This schematic defines the complete motor control subsystem, including power regulation, microcontroller control logic, override inputs, and the H-bridge motor driver. The design distributes power from a 12 V battery to both the control electronics and the motors while maintaining stable operating voltages for each subsystem.</p>
+<p>The power supply section generates the required regulated rails. A 3.3 V switching regulator (AP63203WU-7) provides the logic supply used by the PIC18F47K42 microcontroller, control inputs, and other digital circuitry. A separate 6 V linear regulator (L7806ABD2T) supplies the motor driver’s VM input and the motors themselves. Decoupling capacitors are included around the regulators and major ICs to reduce electrical noise and ensure stable voltage levels.</p>
+<p>The PIC18F47K42 microcontroller acts as the central controller for the subsystem. It is programmed through the Microchip SNAP ICSP interface and operates from the regulated 3.3 V rail. The microcontroller generates PWM outputs for motor speed control and digital signals that determine motor direction. Additional header connections allow communication with other subsystems and provide access for debugging and expansion.</p>
+<p>Two override switches are included to support testing and system safety checks. These switches provide 3.3 V digital signals that can override or supplement the microcontroller control inputs during diagnostic operation.</p>
+<p>The motor driver (H-bridge) receives PWM and digital control signals from the microcontroller and converts them into higher-current outputs capable of driving the two DC motors. Bypass capacitors near the driver help suppress switching noise produced by the motors.</p>
+<p>Overall, this schematic integrates regulated power distribution, microcontroller-based control, and hardware override capability to provide reliable bidirectional motor control while supporting system testing and integration with the broader platform</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/f562c672-f9f8-41f9-825b-3bf0c1d8c4fd" data-desc-position="bottom"><img width="952" height="681" alt="image" src="https://github.com/user-attachments/assets/f562c672-f9f8-41f9-825b-3bf0c1d8c4fd"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/48a9f149-6d5a-4f1e-bf99-ca8b8626ca2f" data-desc-position="bottom"><img width="2557" height="1503" alt="image" src="https://github.com/user-attachments/assets/48a9f149-6d5a-4f1e-bf99-ca8b8626ca2f"></a></p>
+<p><strong>Figure #1:</strong> Showing the acuator subsystem PCB.</p>
+<h2 id="resouces">Resouces</h2>
+<p>The PCb gbr&amp;drl files are available to download <a href="https://github.com/user-attachments/files/25830912/gbr.drl_files_pcb.egr314.zip-file.zip"><em>here</em></a></p>
 
 
 
@@ -901,7 +991,8 @@
 
 
 
-
+  
+  
 
 
 
