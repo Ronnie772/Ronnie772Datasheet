@@ -4,7 +4,7 @@ title: Module PCB
 
 ## Overview
 
-This PCB implements the motor control subsystem and microcontroller interface for the Amphibot V1. Its purpose is to allow bidirectional control of DC motors through an H-bridge driver, and integrate the PIC microcontroller with switches, and debugging interfaces. The board receives a +12V input, which powers the motors and is regulated to 3.3 V for the microcontroller and logic components using a voltage regulator and filtering capacitors.
+This PCB implements the motor control subsystem and microcontroller interface for the Amphibot V1. Its purpose is to allow bidirectional control of DC motors through an H-bridge driver, and integrate the PIC microcontroller with switches, and debugging interfaces. The board receives a +12V input, which powers the motors and is regulated to 3.3 V for the microcontroller and motor driver's logic and 6 V for the motors.
 
 The PIC microcontroller acts as the central controller, sending signals to the H-bridge motor driver that drives the DC motors connected through the Motor-RSC connectors.
 
