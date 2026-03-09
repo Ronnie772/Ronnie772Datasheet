@@ -18,11 +18,14 @@ Overall, this schematic integrates regulated power distribution, microcontroller
 
   <img width="952" height="681" alt="image" src="https://github.com/user-attachments/assets/f562c672-f9f8-41f9-825b-3bf0c1d8c4fd" />
 
+
+**Figure #1:** Showing the acuator subsystem PCB.
+
   <img width="2557" height="1503" alt="image" src="https://github.com/user-attachments/assets/48a9f149-6d5a-4f1e-bf99-ca8b8626ca2f" />
 
 
 
-**Figure #1:** Showing the acuator subsystem PCB.
+**Figure #2:** Showing the PCB's DRC check.
 
 
 ## Resouces
