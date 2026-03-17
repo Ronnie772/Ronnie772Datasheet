@@ -15,8 +15,7 @@ Additional headers (J2, J3) allow external sensors or subsystems to connect to t
 
 **Figure #1:** Showing the acuator subsystem PCB.
 
-  <img width="2557" height="1503" alt="image" src="https://github.com/user-attachments/assets/48a9f149-6d5a-4f1e-bf99-ca8b8626ca2f" />
-
+  <img width="1412" height="999" alt="image" src="https://github.com/user-attachments/assets/33fa0a97-9f59-43bf-a572-5b5753aa254b" />
 
 
 **Figure #2:** Showing the PCB's DRC check.
