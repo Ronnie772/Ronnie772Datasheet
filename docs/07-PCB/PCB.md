@@ -10,7 +10,7 @@ The PIC microcontroller acts as the central controller, sending signals to the H
 
 Additional headers (J2, J3) allow external sensors or subsystems to connect to the microcontroller, while SW1 and SW2 provide manual override inputs for testing or control.
 
-  <img width="952" height="681" alt="image" src="https://github.com/user-attachments/assets/f562c672-f9f8-41f9-825b-3bf0c1d8c4fd" />
+<img width="1491" height="1054" alt="image" src="https://github.com/user-attachments/assets/252d9476-60c2-4392-a740-90e09dd77e15" />
 
 
 **Figure #1:** Showing the acuator subsystem PCB.
