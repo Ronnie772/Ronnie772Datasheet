@@ -22,11 +22,12 @@ Additional headers (J2, J3) allow external sensors or subsystems to connect to t
 **Figure #2:** Showing the PCB's DRC check.
 
 
+
 ## Resouces
 
-The PCB as a PDF download is available [*here*](https://github.com/user-attachments/files/25831121/all.layers.%2B.DRC.check.of.PCB.pdf)
-and the gbr&drl files are available to download [*here*](https://github.com/user-attachments/files/25830912/gbr.drl_files_pcb.egr314.zip-file.zip)
- 
+The PCB as a PDF download is available [*here*](https://github.com/user-attachments/files/26040856/all.layers.%2B.DRC.check-v2.pdf)
+and the gbr&drl files are available to download [*here*](https://github.com/user-attachments/files/26040865/egr314-pcb-RSC.v2.zip)
+
  
 
 
