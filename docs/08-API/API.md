@@ -1,5 +1,5 @@
 ---
-title: Module's Block Diagram
+title: API
 tags:
 - tag1
 - tag2
