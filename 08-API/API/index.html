@@ -892,6 +892,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#message-type-0x0001-set-motor-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0001 – Set Motor Speed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-0x0004-motor-telemetry-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0004 – Motor Telemetry Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-0x0005-emergency-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0005 – Emergency Stop
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -995,6 +1022,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#message-type-0x0001-set-motor-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0001 – Set Motor Speed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-0x0004-motor-telemetry-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0004 – Motor Telemetry Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-0x0005-emergency-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0005 – Emergency Stop
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1021,7 +1075,133 @@
   <h1>Module's Block Diagram</h1>
 
 <h2 id="overview">Overview</h2>
-<p>“This page documents the UART message types used by the Actuator PIC board.”</p>
+<p>This document defines the UART message API for the Actuator. It includes all messages sent, received, and acted upon by the actuator subsystem. All messages follow the class communication protocol and only the message data portion is defined here.</p>
+<h2 id="message-type-0x0001-set-motor-speed">Message Type 0x0001 – Set Motor Speed</h2>
+<p>Direction: Received</p>
+<p>Purpose: Command to set motor speed and direction.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1–2</th>
+<th>Byte 3</th>
+<th>Byte 4–5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>direction</td>
+<td>target_speed_rpm</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint16_t</td>
+<td>uint8_t</td>
+<td>uint16_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>1</td>
+<td>2</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>1</td>
+<td>1</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<p>Number of bytes: 5</p>
+<h2 id="message-type-0x0004-motor-telemetry-response">Message Type 0x0004 – Motor Telemetry Response</h2>
+<p>Direction: Sent</p>
+<p>Purpose: Reports motor state and current speed.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1–2</th>
+<th>Byte 3</th>
+<th>Byte 4–5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>direction</td>
+<td>target_speed_rpm</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint16_t</td>
+<td>uint8_t</td>
+<td>uint16_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>4</td>
+<td>2</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>4</td>
+<td>1</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<p>Number of bytes: 5</p>
+<h2 id="message-type-0x0005-emergency-stop">Message Type 0x0005 – Emergency Stop</h2>
+<p>Direction: Received / Acted on</p>
+<p>Purpose: Immediately halts motor operation.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Byte 1–2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint16_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Number of bytes: 2</p>
 
 
 
