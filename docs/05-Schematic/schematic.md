@@ -17,7 +17,7 @@ The motor driver (H-bridge) receives PWM and digital control signals from the mi
 Overall, this schematic integrates regulated power distribution, microcontroller-based control, and hardware override capability to provide reliable bidirectional motor control while supporting system testing and integration with the broader platform
 
 
-  <img width="2398" height="980" alt="image" src="https://github.com/user-attachments/assets/02498d80-62fb-4308-9967-e7d1c392e913" />
+  <img width="2328" height="956" alt="image" src="https://github.com/user-attachments/assets/1863398b-a081-4a97-9050-074ac19685ac" />
 
 
 
@@ -26,6 +26,5 @@ Overall, this schematic integrates regulated power distribution, microcontroller
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25830843/egr314-design-RSC.pdf), and the Zip folder of the project [*here*](https://github.com/user-attachments/files/25830856/egr314-design-RSC.zip-file.zip)
+The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/27269256/egr314-design-RSC.v2.pdf), and the Zip folder of the project [*here*](https://github.com/user-attachments/files/27269275/egr314-design-RSC.v2.zip.zip)
  
-
