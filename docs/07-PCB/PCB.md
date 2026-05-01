@@ -10,13 +10,13 @@ The PIC microcontroller acts as the central controller, sending signals to the H
 
 Additional headers (J2, J3) allow external sensors or subsystems to connect to the microcontroller, while SW1 and SW2 provide manual override inputs for testing or control.
 
-<img width="1491" height="1054" alt="image" src="https://github.com/user-attachments/assets/252d9476-60c2-4392-a740-90e09dd77e15" />
+ <img width="1253" height="1118" alt="image" src="https://github.com/user-attachments/assets/75295e3c-6e46-45c3-9508-8da47bf5e21f" />
+
 
 
 **Figure #1:** Showing the acuator subsystem PCB.
 
-<img width="2559" height="1502" alt="image" src="https://github.com/user-attachments/assets/ce9f208b-6cf7-4658-9b8b-a797c40a1555" />
-
+ <img width="2559" height="1502" alt="image" src="https://github.com/user-attachments/assets/655597bb-76fd-47a7-829e-176c55dc1d77" />
 
 
 **Figure #2:** Showing the PCB's DRC check.
@@ -26,7 +26,7 @@ Additional headers (J2, J3) allow external sensors or subsystems to connect to t
 ## Resouces
 
 The PCB as a PDF download is available [*here*](https://github.com/user-attachments/files/26040856/all.layers.%2B.DRC.check-v2.pdf)
-and the gbr&drl files are available to download [*here*](https://github.com/user-attachments/files/26040865/egr314-pcb-RSC.v2.zip)
+and the gbr&drl files are available to download [*here*](https://github.com/user-attachments/files/27269319/JLC_v3.zip)
 
  
 
