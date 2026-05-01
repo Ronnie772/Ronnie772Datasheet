@@ -12,22 +12,25 @@ Additional headers (J2, J3) allow external sensors or subsystems to connect to t
 
  <img width="1253" height="1118" alt="image" src="https://github.com/user-attachments/assets/75295e3c-6e46-45c3-9508-8da47bf5e21f" />
 
+**Figure #1:** Showing the complete acuator PCB.
 
+<img width="1314" height="1166" alt="front" src="https://github.com/user-attachments/assets/dbc32f18-ff31-48f3-8764-327ba9fc3887" />
 
-**Figure #1:** Showing the acuator subsystem PCB.
+**Figure #2:** Showing the Front Copper of the PCB.
 
- <img width="2559" height="1502" alt="image" src="https://github.com/user-attachments/assets/655597bb-76fd-47a7-829e-176c55dc1d77" />
+<img width="1318" height="1172" alt="back" src="https://github.com/user-attachments/assets/552f5820-e482-4f7b-b587-566258fb459f" />
 
+**Figure #3:** Showing the Back Copper of the PCB.
 
-**Figure #2:** Showing the PCB's DRC check.
+ <img width="2408" height="1188" alt="DRC-check" src="https://github.com/user-attachments/assets/079b92a6-7b5e-4ee1-b235-ea23fbb11cb7" />
+
+**Figure #4:** Showing the PCB's DRC check.
 
 
 
 ## Resouces
 
-The PCB as a PDF download is available [*here*](https://github.com/user-attachments/files/26040856/all.layers.%2B.DRC.check-v2.pdf)
-and the gbr&drl files are available to download [*here*](https://github.com/user-attachments/files/27269319/JLC_v3.zip)
-
- 
+The PCB as a PDF download is available [*here*](https://github.com/user-attachments/files/27269400/all_layers.pdf.pdf).
+The gbr&drl files are available to download [*here*](https://github.com/user-attachments/files/27269319/JLC_v3.zip).
 
 
