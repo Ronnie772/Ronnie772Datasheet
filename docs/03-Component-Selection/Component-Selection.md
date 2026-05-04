@@ -211,25 +211,26 @@ title: Module's Selected Major Components
     | Meets surface mount constraint of project |                                                        |
     
 
-3. TC78H620FNG,EL
+3. IFX9201SGAUMA1CT
 
-   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/49882959-2c78-4c99-8b9a-53767750feca" />
+   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0d0ccc3f-2b5a-4dbd-8d0f-9c5ad789322f" />
 
-    * $1.37/each
-    * [link to product](https://www.digikey.com/en/products/detail/toshiba-semiconductor-and-storage/TC78H620FNG-EL/7056845)
-    * [Datasheet](https://toshiba.semicon-storage.com/info/TC78H620FNG_datasheet_en_20161125.pdf?did=35802&prodName=TC78H620FNG)
+
+    * $3.72/each
+    * [link to product](https://www.digikey.com/en/products/detail/infineon-technologies/IFX9201SGAUMA1/5415542?s=N4IgTCBcDaIJIDEAaBOMAGAjAZQOIEEBVAWX0wGEAVEAXQF8g)
+    * [Datasheet](https://www.infineon.com/assets/row/public/documents/10/49/infineon-ifx9201sg-ds-en.pdf?fileId=5546d4624cb7f111014d2e8916795dea&ack=t)
 
 
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
+    | Meets Serial communication requirement (SPI)| Higher cost |
     | Meets surface mount constraint of project |                  |
     
 
 
-**Choice:** Option 2: TB6612FNG
-**Rationale:** The TB6612FNG motor driver was chosen because it provides dual H-bridge functionality, allowing the system to control two motors simultaneously with forward and reverse direction control. This capability simplifies the circuit by integrating multiple driver functions into a single IC. The component is also inexpensive and available in a surface-mount package, making it compatible with the project's PCB constraints. While the driver requires additional external components for interface support, its ability to efficiently control motors and handle bidirectional current makes it well-suited for actuator control within the module.
+**Choice:** Option 3: IFX9201SGAUMA1CT
+**Rationale:** The IFX9201SGAUMA1CT motor driver was chosen because it provides serial communication functionality, allowing the system to control two motors simultaneously with forward and reverse direction control. The component though higher in price also meets the surface-mount requirements, making it compatible with the project's PCB constraints. Its ability to efficiently control motors and handle bidirectional current makes it well-suited for actuator control within the module.
 
 
 **Motors**
@@ -289,13 +290,13 @@ title: Module's Selected Major Components
  | voltage regulator (3.3V) | AP63203WU-7 |
  | voltage regulator (6V) | L7806ABD2T-TR  |
  | power supply | Battery + Headers |
- | motor driver | TB6612FNG |
+ | motor driver | IFX9201SGAUMA1CT |
  | motor | 2371 6V motor (Pololu) |
 
 **Estimated Total Core Component Cost:**
 
-AP63203WU-7 (0.71) + L7806ABD2T-TR (0.96) + Battery + Headers (15.9) + TB6612FNG (1.82) + 2371 6V motor (Pololu) (23.95) = $43.34
+AP63203WU-7 (0.71) + L7806ABD2T-TR (0.96) + Battery + Headers (15.9) + IFX9201SGAUMA1CT (2)*(3.72) + 2371 6V motor (Pololu) (23.95) = $48.96
 
 **Cost Discussion**
 
-The selected components were chosen to balance cost, efficiency, and performance. Most of the components are inexpensive and widely available, ensuring that the total system cost remains low while maintaining reliable operation. The use of integrated components such as the TB6612FNG motor driver and AP63203 switching regulator reduces the number of external components required, which simplifies the PCB design and further lowers manufacturing costs. Although certain components, such as the Pololu motor, have a higher individual price, their improved performance and reliability justify the cost by enhancing the overall functionality of the system.
+The selected components were chosen to balance cost, efficiency, and performance. Most of the components are inexpensive and widely available, ensuring that the total system cost remains low while maintaining reliable operation. The use of integrated components such as the IFX9201SGAUMA1CT motor driver and AP63203 switching regulator reduces the number of external components required, which simplifies the PCB design and further lowers manufacturing costs. Although certain components, such as the Pololu motor, have a higher individual price, their improved performance and reliability justify the cost by enhancing the overall functionality of the system.
