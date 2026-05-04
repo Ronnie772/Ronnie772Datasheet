@@ -1,5 +1,3 @@
-[Power_Budget_(final).pdf](https://github.com/user-attachments/files/27379408/Power_Budget_.final.pdf)
-[Power_Budget_(final).pdf](https://github.com/user-attachments/files/27379406/Power_Budget_.final.pdf)
 ---
 title: Module Power Budget
 ---
@@ -12,9 +10,9 @@ The system uses three main power rails: 3.3V, 6V, and 12V. The 3.3V rail powers 
 
 The 12V battery serves as the primary external power source, supplying power to the voltage regulators that generate the lower voltage rails. After accounting for all component loads and safety margins, the system remains within the current capabilities of the selected regulators and battery, leaving additional current capacity available for safe operation and potential future expansion.  
   
-  
-<img width="1097" height="874" alt="image" src="https://github.com/user-attachments/assets/adc71b59-fc9c-4876-a7dd-5efa4e63ebdd" />
-
+  <img width="1924" height="736" alt="image" src="https://github.com/user-attachments/assets/61fc266f-762a-4a68-a20f-353bfcfd1c20" />
+  <img width="1928" height="535" alt="image" src="https://github.com/user-attachments/assets/d2e20c34-8e2d-48d4-8a20-cef7f832a270" />
+  <img width="1924" height="193" alt="image" src="https://github.com/user-attachments/assets/47dcf3d5-278e-42b0-a281-cca54362857e" />
 
 [Power Budget (egr334).pdf](https://github.com/user-attachments/files/27379409/Power_Budget_.final.pdf),
 [*exel*](https://github.com/user-attachments/files/27379361/Power_Budget_.final.xlsx)
