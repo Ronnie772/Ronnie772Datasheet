@@ -26,7 +26,7 @@
 
     
       
-        <title>09 Code - EGR 314 Raunak Singh Data Sheet</title>
+        <title>include "mcc_generated_files/system/system.h" - EGR 314 Raunak Singh Data Sheet</title>
       
     
     
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#include-mcc_generated_filessystemsystemh" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              09 Code
+              include "mcc_generated_files/system/system.h"
             
           </span>
         </div>
@@ -909,12 +914,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    09 Code
+    include "mcc_generated_files/system/system.h"
   </span>
   
 
@@ -1003,6 +1010,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1025,9 +1034,228 @@
   
 
 
-  <h1>09 Code</h1>
-
-
+<h1 id="include-mcc_generated_filessystemsystemh">include "mcc_generated_files/system/system.h"</h1>
+<h1 id="include">include <xc.h></xc.h></h1>
+<h1 id="include_1">include <stdint.h></stdint.h></h1>
+<h1 id="include_2">include <stdbool.h></stdbool.h></h1>
+<h1 id="include_3">include <stddef.h></stddef.h></h1>
+<p>/<em> ?? SPI motor command bytes ?? </em>/</p>
+<h1 id="define-fwd-0xef">define FWD     0xEF</h1>
+<h1 id="define-rev-0xed">define REV     0xED</h1>
+<h1 id="define-stp-0xff">define STP     0xFF</h1>
+<p>/<em> ?? UART protocol defines ?? </em>/</p>
+<h1 id="define-my_id-r">define MY_ID               'R'</h1>
+<h1 id="define-other_id_1-m">define OTHER_ID_1          'M'</h1>
+<h1 id="define-other_id_2-l">define OTHER_ID_2          'L'</h1>
+<h1 id="define-broadcast_id-x">define BROADCAST_ID        'X'</h1>
+<h1 id="define-prefix_0-a">define PREFIX_0            'A'</h1>
+<h1 id="define-prefix_1-z">define PREFIX_1            'Z'</h1>
+<h1 id="define-suffix_0-y">define SUFFIX_0            'Y'</h1>
+<h1 id="define-suffix_1-b">define SUFFIX_1            'B'</h1>
+<h1 id="define-max_message_bytes-64u">define MAX_MESSAGE_BYTES   64U</h1>
+<h1 id="define-message_gap_ms-2u">define MESSAGE_GAP_MS      2U</h1>
+<h1 id="define-idle_timeout_ms-1000u">define IDLE_TIMEOUT_MS     1000U</h1>
+<h1 id="define-idle_message">define IDLE_MESSAGE        "..........."</h1>
+<h1 id="define-msg_too_long-azmessage-too-longyb">define MSG_TOO_LONG        "AZmessage too longYB"</h1>
+<h1 id="define-broadcast_message-azbroadcast-msgyb">define BROADCAST_MESSAGE   "AZBroadcast msgYB"</h1>
+<p>/<em> ?? UART helpers ?? </em>/
+static void UART1_SendByte_Blocking(uint8_t data)
+{
+    while (!UART1_IsTxReady())
+    {
+    }
+    UART1_Write(data);
+}</p>
+<p>static void UART1_SendString(const char <em>text)
+{
+    while (</em>text != '\0')
+    {
+        UART1_SendByte_Blocking((uint8_t)*text);
+        text++;
+    }
+}</p>
+<p>static bool MessageIsValid(const uint8_t *buffer, size_t length)
+{
+    if (length &lt; 6U)
+    {
+        return false;
+    }
+    if ((buffer[0] != (uint8_t)PREFIX_0) ||
+        (buffer[1] != (uint8_t)PREFIX_1))
+    {
+        return false;
+    }
+    if ((buffer[length - 2U] != (uint8_t)SUFFIX_0) ||
+        (buffer[length - 1U] != (uint8_t)SUFFIX_1))
+    {
+        return false;
+    }
+    if ((buffer[2] != (uint8_t)MY_ID) &amp;&amp;
+        (buffer[2] != (uint8_t)OTHER_ID_1) &amp;&amp;
+        (buffer[2] != (uint8_t)OTHER_ID_2))
+    {
+        return false;
+    }</p>
+<p>return true;
+}</p>
+<p>static bool UART1_ReadMessage(uint8_t <em>buffer, size_t </em>length)
+{
+    uint16_t gap_ms = 0U;
+    size_t count = 0U;
+    size_t uart_error;</p>
+<p>*length = 0U;</p>
+<p>while (1)
+    {
+        if (UART1_IsRxReady())
+        {
+            gap_ms = 0U;
+      uart_error = UART1_ErrorGet();
+            buffer[count] = UART1_Read();</p>
+<p>//            if (uart_error != 0U)
+//            {
+//                count = 0U;
+//                continue;
+//            }
+          count++;
+            if (count &gt;= MAX_MESSAGE_BYTES)
+            {
+                UART1_SendString(MSG_TOO_LONG);
+              while (1)
+                {
+                    if (UART1_IsRxReady())
+                    {
+                        (void)UART1_ErrorGet();
+                        (void)UART1_Read();
+                        gap_ms = 0U;
+                    }
+                    else
+                    {
+                        __delay_ms(1);
+                        gap_ms++;
+                        if (gap_ms &gt;= MESSAGE_GAP_MS)
+                        {
+                            <em>length = 0U;
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (count == 0U)
+            {
+                return false;
+            }
+          __delay_ms(1);
+            gap_ms++;
+            if (gap_ms &gt;= MESSAGE_GAP_MS)
+            {
+                </em>length = count;
+                return true;
+            }
+        }
+    }
+}</p>
+<p>static void ProcessMessage(const uint8_t <em>buffer, size_t length)
+{
+    size_t i;
+    uint8_t receiver_id;
+    if (!MessageIsValid(buffer, length))
+    {
+        return;
+    }
+    receiver_id = buffer[3];
+    if (receiver_id == (uint8_t)BROADCAST_ID)
+    {
+        UART1_SendString(BROADCAST_MESSAGE);
+    }
+    if (receiver_id == (uint8_t)MY_ID)
+    {
+        if (length &gt;= 9U)
+        {
+            size_t payload_len = length - 6U;
+            /</em> AZLRFWDYB or AZMRFWDYB ? forward <em>/
+            if ((payload_len == 3U) &amp;&amp;
+                (buffer[4] == (uint8_t)'F') &amp;&amp;
+                (buffer[5] == (uint8_t)'W') &amp;&amp;
+                (buffer[6] == (uint8_t)'D'))
+            {
+                CSN_SetLow();
+                __delay_us(5);
+                SPI1_ByteExchange(FWD);
+                __delay_ms(5);
+                CSN_SetHigh();
+            }
+            /</em> AZLRRESYB or AZMRRESYB ? reverse <em>/
+            else if ((payload_len == 3U) &amp;&amp;
+                     (buffer[4] == (uint8_t)'R') &amp;&amp;
+                     (buffer[5] == (uint8_t)'E') &amp;&amp;
+                     (buffer[6] == (uint8_t)'S'))
+            {
+                CSN_SetLow();
+                __delay_us(10);
+                SPI1_ByteExchange(REV);
+                __delay_ms(10);
+                CSN_SetHigh();
+            }
+            /</em> AZLRSTPYB or AZMRSTPYB ? stop */
+            else if ((payload_len == 3U) &amp;&amp;
+                     (buffer[4] == (uint8_t)'S') &amp;&amp;
+                     (buffer[5] == (uint8_t)'T') &amp;&amp;
+                     (buffer[6] == (uint8_t)'P'))
+            {
+                CSN_SetLow();
+                __delay_us(5);
+                SPI1_ByteExchange(STP);
+                __delay_ms(5);
+                CSN_SetHigh();
+            }
+        }
+        return;
+    }
+    for (i = 0U; i &lt; length; i++)
+    {
+        UART1_SendByte_Blocking(buffer[i]);
+    }
+}</p>
+<p>void main(void)
+{
+    uint8_t message_buffer[MAX_MESSAGE_BYTES];
+    size_t message_length;
+    uint16_t idle_count_ms = 0U;</p>
+<p>SYSTEM_Initialize();
+    UART1_Initialize();
+    SPI1_Initialize();
+    SPI1_Host_Open(HOST_CONFIG);
+    CSN_SetHigh();
+    PWM_SetLow();
+    DIR1_SetLow();
+    DIS_SetLow();
+    __delay_ms(1000);
+    INTERRUPT_GlobalInterruptEnable();
+    while (1)
+    {
+        if (UART1_IsRxReady())
+        {
+            idle_count_ms = 0U;
+            if (UART1_ReadMessage(message_buffer, &amp;message_length))
+            {
+                ProcessMessage(message_buffer, message_length);
+            }
+        }
+        else
+        {
+            __delay_ms(1);
+            idle_count_ms++;
+           if (idle_count_ms &gt;= IDLE_TIMEOUT_MS)
+            {
+                UART1_SendString(IDLE_MESSAGE);
+                idle_count_ms = 0U;
+            }
+        }
+    }
+}</p>
 
 
 
