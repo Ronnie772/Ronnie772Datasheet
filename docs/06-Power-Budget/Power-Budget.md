@@ -14,5 +14,5 @@ The 12V battery serves as the primary external power source, supplying power to 
   <img width="1928" height="535" alt="image" src="https://github.com/user-attachments/assets/d2e20c34-8e2d-48d4-8a20-cef7f832a270" />
   <img width="1924" height="193" alt="image" src="https://github.com/user-attachments/assets/47dcf3d5-278e-42b0-a281-cca54362857e" />
 
-[Power Budget (egr334).pdf](https://github.com/user-attachments/files/27379409/Power_Budget_.final.pdf),
-[*exel*](https://github.com/user-attachments/files/27379361/Power_Budget_.final.xlsx)
+The Power Budget as a PDF download is available [*here*](https://github.com/user-attachments/files/27379409/Power_Budget_.final.pdf)
+For Exel click [*here*](https://github.com/user-attachments/files/27379361/Power_Budget_.final.xlsx)
