@@ -1,3 +1,5 @@
+[Power_Budget_(final).pdf](https://github.com/user-attachments/files/27379408/Power_Budget_.final.pdf)
+[Power_Budget_(final).pdf](https://github.com/user-attachments/files/27379406/Power_Budget_.final.pdf)
 ---
 title: Module Power Budget
 ---
@@ -14,7 +16,5 @@ The 12V battery serves as the primary external power source, supplying power to 
 <img width="1097" height="874" alt="image" src="https://github.com/user-attachments/assets/adc71b59-fc9c-4876-a7dd-5efa4e63ebdd" />
 
 
-[Power Budget (egr334).pdf](https://github.com/user-attachments/files/25691557/Power.Budget.egr334.pdf),
+[Power Budget (egr334).pdf](https://github.com/user-attachments/files/27379409/Power_Budget_.final.pdf),
 [*exel*](https://github.com/user-attachments/files/27379361/Power_Budget_.final.xlsx)
-
-
