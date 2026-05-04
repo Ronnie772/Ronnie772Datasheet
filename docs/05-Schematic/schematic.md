@@ -8,7 +8,7 @@ This schematic details the **motor subsystem** for the **AMPHIBOT**. The system 
 
 The **PIC18F57Q83** serves as the central controller and interfaces with the system through several digital and PWM-capable I/O pins. The device is programmed through a **Microchip SNAP programmer** using the **ICSP interface**. Two **CSN pins** send signals to the motor drivers to regulate motor speed, while **DIR pins** send a High/Low digital signal to control the direction of motor rotation.
 
-Two **override/system check buttons** are included to support manual testing and diagnostic procedures. These inputs provide digital signals that allow the system to verify **motor driver functionality** and **motor behavior** independently of the firmware.
+Two **override/system check buttons** are included to support manual testing and diagnostic procedures. These inputs provide digital signals that allow the system to verify **motor functionality** and **motor behavior** independently of the firmware.
 
   <img width="2328" height="956" alt="image" src="https://github.com/user-attachments/assets/1863398b-a081-4a97-9050-074ac19685ac" />
 
