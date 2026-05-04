@@ -4,11 +4,11 @@ title: Module PCB
 
 ## Overview
 
-This PCB shows the actuator subsystem for the Amphibot V1. Its purpose is to allow serial communication that allows bidirectional and speed control of the DC motors through an H-bridge driver (IFX9201SGAUMA1), the PIC microcontroller recieved signals from the HMI PCB and is able to maintain communication witht the other PCB using UART. The debug switches allow for an easier ..... The board receives a +12V input, which powers the motors and is regulated to 3.3 V for the microcontroller and motor driver's logic and 6 V for the motors.
+This PCB represents the **actuator subsystem** for the **Amphibot**, designed for EGR 314. The system is powered by a **12V 7Ah battery**, which feeds two voltage regulation stages: an **AP63203WU-7** switching regulator that steps down to **3.3V** for the PIC18F57Q83 microcontroller and motor driver logic, and an **L7806ABD2T** linear regulator that provides a stable **6V** supply to the motors through the **IFX9201SGAUMA1** H-bridge motor driver.
 
-The PIC microcontroller acts as the central controller, sending signals to the H-bridge motor driver that drives the DC motors connected through the Motor-RSC connectors.
+The **PIC18F57Q83** serves as the central controller, managing bidirectional DC motor control and speed regulation through dedicated I/O pins. **CSN pins** output signals to the motor drivers to regulate motor speed, while **DIR pins** send digital HIGH/LOW signals to control the direction of rotation. The PIC is programmed via a **Microchip SNAP programmer** using the **ICSP interface**.
 
-Additional headers (J2, J3) allow external sensors or subsystems to connect to the microcontroller, while SW1 and SW2 provide manual override inputs for testing or control.
+Two **override/system check buttons (SW1, SW2)** are included to support manual testing and diagnostic procedures, allowing independent verification of motor driver functionality and motor behavior outside of firmware control. Additional headers **(J2, J3)** provide connection points for external sensors or subsystems.
 
  <img width="1253" height="1118" alt="image" src="https://github.com/user-attachments/assets/75295e3c-6e46-45c3-9508-8da47bf5e21f" />
 
