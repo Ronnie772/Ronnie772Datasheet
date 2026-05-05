@@ -26,7 +26,7 @@
 
     
       
-        <title>11 Reflection - EGR 314 Raunak Singh Data Sheet</title>
+        <title>Reflection - EGR 314 Raunak Singh Data Sheet</title>
       
     
     
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11 Reflection
+              Reflection
             
           </span>
         </div>
@@ -1042,15 +1047,85 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Reflection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    11 Reflection
+    Reflection
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-modules-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of Module's Success
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review of Module's Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements-met" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements Met
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-and-module-startup-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller and Module Startup Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1136,6 +1211,56 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-modules-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of Module's Success
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review of Module's Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements-met" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements Met
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-and-module-startup-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller and Module Startup Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1157,7 +1282,25 @@
   
 
 
-  <h1>11 Reflection</h1>
+  <h1>Reflection</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This page reflects on the development of the <strong>Amphibot</strong> actuator subsystem over the course of EGR 314. It reviews what requirements were successfully met, what was missed, and the most important lessons learned throughout the design, fabrication, assembly, and integration process.</p>
+<hr>
+<h2 id="review-of-modules-success">Review of Module's Success</h2>
+<h3 id="requirements-met">Requirements Met</h3>
+<p>The actuator subsystem successfully met its core functional requirements. The <strong>PIC18F57Q83</strong> microcontroller was correctly configured and programmed to receive <strong>UART messages</strong> from the HMI subsystem, parse them according to the team's communication protocol, and relay the appropriate <strong>SPI motor commands</strong> to the <strong>IFX9201SGAUMA1</strong> H-bridge driver. Both DC motors responded correctly to forward, reverse, and stop commands, and the system operated reliably from the <strong>12V battery</strong> through the two voltage regulation stages. The <strong>ICSP programming interface</strong> worked as expected with the <strong>Microchip SNAP programmer</strong>, and the <strong>override/system check buttons</strong> functioned correctly for manual testing and diagnostic purposes.</p>
+<hr>
+<h2 id="microcontroller-and-module-startup-tips">Microcontroller and Module Startup Tips</h2>
+<p>The following is a list of tips gathered from bringing up the PIC18F57Q83-based actuator subsystem. These are things that would have saved significant time if known earlier:</p>
+<ul>
+<li><strong>Verify every footprint against the manufacturer's datasheet before ordering</strong> — do not trust supplier-provided footprints blindly, the L7806ABD2T footprint from DigiKey was incorrect and required rework.</li>
+<li><strong>Double-check connector footprint sizes before fabrication</strong> — a footprint that is even slightly undersized forces jumper wire workarounds that could have been avoided with a quick measurement.</li>
+<li><strong>Use MCC to configure all peripherals before writing any application code</strong> — configuring SPI, UART, and PWM registers manually from scratch is far slower and more error-prone than using the MCC code generator.</li>
+<li><strong>Read the datasheet for every component</strong> — the IFX9201SGAUMA1 has specific SPI timing requirements around the CSN pin that must be respected.</li>
+<li><strong>Test UART communication in isolation before integrating with other subsystems</strong> — use a terminal emulator like Data Visualizer or if using SMD components then use something like an EPS and connect your RX and TX to it to confirm your message format is correct and confirm your UART communication setup before intergrating the code with other functionalities.</li>
+<li><strong>Start with a simple loopback test</strong> — connecting TX to RX and echoing bytes back is the fastest way to confirm your UART peripheral is configured correctly.</li>
+</ul>
 
 
 
@@ -1165,7 +1308,8 @@
 
 
 
-
+  
+  
 
 
 
