@@ -820,6 +820,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-the-power-budget-was-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Power Budget Was Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1061,6 +1079,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-the-power-budget-was-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Power Budget Was Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1093,6 +1129,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/61fc266f-762a-4a68-a20f-353bfcfd1c20" data-desc-position="bottom"><img width="1924" height="736" alt="image" src="https://github.com/user-attachments/assets/61fc266f-762a-4a68-a20f-353bfcfd1c20"></a>
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d2e20c34-8e2d-48d4-8a20-cef7f832a270" data-desc-position="bottom"><img width="1928" height="535" alt="image" src="https://github.com/user-attachments/assets/d2e20c34-8e2d-48d4-8a20-cef7f832a270"></a>
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/47dcf3d5-278e-42b0-a281-cca54362857e" data-desc-position="bottom"><img width="1924" height="193" alt="image" src="https://github.com/user-attachments/assets/47dcf3d5-278e-42b0-a281-cca54362857e"></a></p>
+<h2 id="how-the-power-budget-was-used">How the Power Budget Was Used</h2>
+<p>The power budget was used as the primary tool for determining the appropriate fuse rating for the system. By summing the maximum current draw of each component — the <strong>PIC18F57Q83</strong> microcontroller, the <strong>IFX9201SGAUMA1</strong> motor driver, the <strong>AP63203WU-7</strong> switching regulator, the <strong>L7806ABD2T</strong> voltage regulator, and the two <strong>Pololu 2371 DC motors</strong> — a worst-case total current consumption was estimated for the <strong>12V</strong> supply rail. This worst-case figure was then used to select a fuse with a rating high enough to allow normal operation under peak load, while still providing protection against a short circuit or unexpected overcurrent condition.</p>
+<p>The analysis confirmed that the selected fuse rating provides adequate headroom above the expected operating current, while remaining low enough to protect the wiring and components in a fault scenario. Without this calculation, selecting a fuse by guesswork risks either nuisance tripping during normal motor operation or, more critically, using a fuse rated too high to protect the circuit effectively.</p>
+<h2 id="resources">Resources</h2>
 <p>The Power Budget as a PDF download is available <a href="https://github.com/user-attachments/files/27379409/Power_Budget_.final.pdf"><em>here</em></a>
 <br>
 For Exel click <a href="https://github.com/user-attachments/files/27379361/Power_Budget_.final.xlsx"><em>here</em></a></p>
