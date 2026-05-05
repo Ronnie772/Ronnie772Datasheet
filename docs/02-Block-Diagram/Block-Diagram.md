@@ -18,7 +18,16 @@ Two **override/system check buttons** are included to support manual testing and
 
   <img width="1081" height="652" alt="image" src="https://github.com/user-attachments/assets/f26372dc-6c4e-44e1-be38-3e5efb17fab0" />
 
+## Design Decisions
+
+The block diagram was developed by first identifying the core functional requirements of the motor subsystem: the ability to receive commands over UART, drive two DC motors bidirectionally, and operate reliably from a single battery source. The **PIC18F57Q83** was selected as the central microcontroller because it provides sufficient **PWM and digital I/O pins**, native **SPI and UART peripherals**, and is directly supported by **MPLAB X IDE** and **MCC**, which streamlined firmware development and pin configuration. 
+
+The **12V 7Ah battery** was chosen to provide enough current capacity to drive both motors simultaneously without significant voltage sag. Rather than powering the microcontroller directly from 12V, two separate regulation stages were designed: the **AP63203WU-7** switching regulator steps down to **3.3V** for the logic circuitry, minimizing heat dissipation, while the **L7806ABD2T** provides a stable **6V** rail for the motors through the **IFX9201SGAUMA1** H-bridge driver. This separation ensures that switching noise from the motor driver does not couple into the sensitive microcontroller logic.
+
+The **SPI interface** was chosen to communicate motor commands to the H-bridge driver because it offers faster and more reliable data transfer compared to a simple GPIO toggle approach, allowing precise control over motor direction and speed in a single transaction. The two **override/system check buttons** were included from the start to support hardware-level testing and verification of motor driver behavior independently of firmware, which proved critical during bring-up and debugging.
+
+## Resources
 
 Downloadable pdf available [*here*](https://github.com/user-attachments/files/27378867/block-diagram-RSC-EGR314.drawio.pdf)
-
+zip file of project available [*here*](https://github.com/user-attachments/files/27380395/egr314-design-RSC.v2.zip.zip)
 
