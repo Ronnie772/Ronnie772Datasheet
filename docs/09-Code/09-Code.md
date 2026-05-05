@@ -1,3 +1,10 @@
+---
+title: Code
+tags:
+- tag1
+- tag2
+---
+
 ## Overview
 
 This page contains the firmware for the **PIC18F57Q83** microcontroller that controls the **motor subsystem** of the **Amphibot**. The code handles **UART message parsing**, **SPI motor commands**, and an **idle watchdog** that periodically transmits a status string when no messages are received (for debugging purposes).
