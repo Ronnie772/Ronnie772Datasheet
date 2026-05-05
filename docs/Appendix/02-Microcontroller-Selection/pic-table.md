@@ -24,10 +24,10 @@ title: Appendix - Controller Table for the PIC
 
 | Module | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
-| GPIO       | 36           | 8      | ?                              |
-| ADC        | 35           | ?      | ?                              |
-| UART       | 4           | 2      | ?                              |
-| SPI        | 3           | ?      | ?                              |
-| I2C        | 4 (can be 6) | ?      | ?                              |
-| PWM        | 4           | 2      | ?                              |
-| ICSP       | 2           | 2      | ?                              |
+| GPIO       | 44           | 12      | *                              |
+| ADC        | 43           | -      | -                             |
+| UART       | 5           | 2      | RC7, RC6, RB4, RB5            |
+| SPI        | 6           | 2      | RC3, RC4                       |
+| I2C        | 4 (can be 6) | -      | -                              |
+| PWM        | 4           | 2      | RC0                              |
+| ICSP       | 2           | 2      | RB6, RB7                        |
