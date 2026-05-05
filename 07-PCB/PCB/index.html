@@ -1108,17 +1108,26 @@
 <p>This PCB represents the <strong>actuator subsystem</strong> for the <strong>Amphibot</strong>, designed for EGR 314. The system is powered by a <strong>12V 7Ah battery</strong>, which feeds two voltage regulation stages: an <strong>AP63203WU-7</strong> switching regulator that steps down to <strong>3.3V</strong> for the PIC18F57Q83 microcontroller and motor driver logic, and an <strong>L7806ABD2T</strong> linear regulator that provides a stable <strong>6V</strong> supply to the motors through the <strong>IFX9201SGAUMA1</strong> H-bridge motor driver.</p>
 <p>The <strong>PIC18F57Q83</strong> serves as the central controller, managing bidirectional DC motor control and speed regulation through dedicated I/O pins. <strong>CSN pins</strong> output signals to the motor drivers to regulate motor speed, while <strong>DIR pins</strong> send digital HIGH/LOW signals to control the direction of rotation. The PIC is programmed via a <strong>Microchip SNAP programmer</strong> using the <strong>ICSP interface</strong>.</p>
 <p>Two <strong>override/system check buttons (SW1, SW2)</strong> are included to support manual testing and diagnostic procedures, allowing independent verification of motor driver functionality and motor behavior outside of firmware control. Additional headers <strong>(J2, J3)</strong> provide connection points for external sensors or subsystems.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/3eafea52-fcfc-4e00-8b27-18c7fb451db6" data-desc-position="bottom"><img width="2278" height="2434" alt="pcb_populated_front" src="https://github.com/user-attachments/assets/3eafea52-fcfc-4e00-8b27-18c7fb451db6"></a></p>
+<p><strong>Figure #1:</strong> Showing the complete populated acuator PCB (front).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/b6d4223b-14cc-4fda-ab0e-e31fba72da12" data-desc-position="bottom"><img width="3372" height="3001" alt="pcb_populated_back" src="https://github.com/user-attachments/assets/b6d4223b-14cc-4fda-ab0e-e31fba72da12"></a></p>
+<p><strong>Figure #2:</strong> Showing the complete populated acuator PCB (back).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/f4d908ab-5b73-4e5c-ad95-05408f39a475" data-desc-position="bottom"><img width="2197" height="1958" alt="pcb_unpopulated_front" src="https://github.com/user-attachments/assets/f4d908ab-5b73-4e5c-ad95-05408f39a475"></a></p>
+<p><strong>Figure #3:</strong> Showing the unpopulated acuator PCB (front).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/20e32781-33f1-422d-98d7-f1546b665e78" data-desc-position="bottom"><img width="2864" height="2555" alt="pcb_unpopulated_back" src="https://github.com/user-attachments/assets/20e32781-33f1-422d-98d7-f1546b665e78"></a></p>
+<p><strong>Figure #4:</strong> Showing the unpopulated acuator PCB (front).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/75295e3c-6e46-45c3-9508-8da47bf5e21f" data-desc-position="bottom"><img width="1253" height="1118" alt="image" src="https://github.com/user-attachments/assets/75295e3c-6e46-45c3-9508-8da47bf5e21f"></a></p>
-<p><strong>Figure #1:</strong> Showing the complete acuator PCB.</p>
+<p><strong>Figure #5:</strong> Showing the complete acuator PCB (ECAD).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/dbc32f18-ff31-48f3-8764-327ba9fc3887" data-desc-position="bottom"><img width="1314" height="1166" alt="front" src="https://github.com/user-attachments/assets/dbc32f18-ff31-48f3-8764-327ba9fc3887"></a></p>
-<p><strong>Figure #2:</strong> Showing the Front Copper of the PCB.</p>
+<p><strong>Figure #6:</strong> Showing the Front Copper of the PCB.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/552f5820-e482-4f7b-b587-566258fb459f" data-desc-position="bottom"><img width="1318" height="1172" alt="back" src="https://github.com/user-attachments/assets/552f5820-e482-4f7b-b587-566258fb459f"></a></p>
-<p><strong>Figure #3:</strong> Showing the Back Copper of the PCB.</p>
+<p><strong>Figure #7:</strong> Showing the Back Copper of the PCB.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/079b92a6-7b5e-4ee1-b235-ea23fbb11cb7" data-desc-position="bottom"><img width="2408" height="1188" alt="DRC-check" src="https://github.com/user-attachments/assets/079b92a6-7b5e-4ee1-b235-ea23fbb11cb7"></a></p>
-<p><strong>Figure #4:</strong> Showing the PCB's DRC check.</p>
+<p><strong>Figure #8:</strong> Showing the PCB's DRC check.</p>
 <h2 id="resouces">Resouces</h2>
 <p>The PCB as a PDF download is available <a href="https://github.com/user-attachments/files/27269400/all_layers.pdf.pdf"><em>here</em></a>.
-The gbr&amp;drl files are available to download <a href="https://github.com/user-attachments/files/27269319/JLC_v3.zip"><em>here</em></a>.</p>
+The gbr&amp;drl files are available to download <a href="https://github.com/user-attachments/files/27269319/JLC_v3.zip"><em>here</em></a>.
+The project zip file is available <a href="https://github.com/user-attachments/files/27381323/egr314-design-RSC.v2.zip.zip"><em>here</em></a></p>
 
 
 
