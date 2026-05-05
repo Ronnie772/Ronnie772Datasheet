@@ -30,6 +30,9 @@ for<br>
 * My part of the project was to design, build and test the motor subsystem that gives complete control of the Amphibot's movement to the user.
 * I also created a CAD model and 3D-printed the prototype used at Innovation Showcase.
 
+  <img width="1122" height="794" alt="IMG_9612" src="https://github.com/user-attachments/assets/8abd5355-5085-4629-9150-3beb03a15e6c" />
+
+
 <img width="500" height="500" alt="IMG_9612" src="https://github.com/user-attachments/assets/61f1efb8-c9ad-48ea-84bb-ba64ab48eae0" />
 <img width="1122" height="938" alt="IMG_9612" src="https://github.com/user-attachments/assets/0d87035d-56d8-4677-b6c6-9847563cf0eb" />
 
