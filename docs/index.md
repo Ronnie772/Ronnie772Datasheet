@@ -33,11 +33,6 @@ for<br>
   <img width="1122" height="794" alt="IMG_9612" src="https://github.com/user-attachments/assets/8abd5355-5085-4629-9150-3beb03a15e6c" />
 
 
-<img width="500" height="500" alt="IMG_9612" src="https://github.com/user-attachments/assets/61f1efb8-c9ad-48ea-84bb-ba64ab48eae0" />
-<img width="1122" height="938" alt="IMG_9612" src="https://github.com/user-attachments/assets/0d87035d-56d8-4677-b6c6-9847563cf0eb" />
-
-
-
 * To review the detials of the Block Diagram click [*here*](https://ronnie772.github.io/Ronnie772Datasheet/02-Block-Diagram/Block-Diagram/)
 
 * To review the detials of the Component Selection process click [*here*](https://ronnie772.github.io/Ronnie772Datasheet/03-Component-Selection/Component-Selection/)
