@@ -31,6 +31,8 @@ for<br>
 * I also created a CAD model and 3D-printed the prototype used at Innovation Showcase.
 
 <img width="500" height="500" alt="IMG_9612" src="https://github.com/user-attachments/assets/61f1efb8-c9ad-48ea-84bb-ba64ab48eae0" />
+<img width="1122" height="938" alt="IMG_9612" src="https://github.com/user-attachments/assets/0d87035d-56d8-4677-b6c6-9847563cf0eb" />
+
 
 
 * To review the detials of the Block Diagram click [*here*](https://ronnie772.github.io/Ronnie772Datasheet/02-Block-Diagram/Block-Diagram/)
