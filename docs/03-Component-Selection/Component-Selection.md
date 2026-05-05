@@ -300,3 +300,12 @@ AP63203WU-7 (0.71) + L7806ABD2T-TR (0.96) + Battery + Headers (15.9) + IFX9201SG
 **Cost Discussion**
 
 The selected components were chosen to balance cost, efficiency, and performance. Most of the components are inexpensive and widely available, ensuring that the total system cost remains low while maintaining reliable operation. The use of integrated components such as the IFX9201SGAUMA1CT motor driver and AP63203 switching regulator reduces the number of external components required, which simplifies the PCB design and further lowers manufacturing costs. Although certain components, such as the Pololu motor, have a higher individual price, their improved performance and reliability justify the cost by enhancing the overall functionality of the system.
+
+## MCC 
+
+<img width="1449" height="1025" alt="image" src="https://github.com/user-attachments/assets/5e1646c4-32aa-4c76-a3b1-583933dba107" />
+<img width="898" height="726" alt="image" src="https://github.com/user-attachments/assets/6b1a34d1-2886-474d-83db-439c07953ef9" />
+<img width="2275" height="725" alt="image" src="https://github.com/user-attachments/assets/a84b06ce-25d5-452d-9a8a-825780936e88" />
+
+
+
