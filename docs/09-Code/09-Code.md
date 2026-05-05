@@ -245,3 +245,6 @@ void main(void)
     }
 }
 ```
+## Resources
+
+MPLab project zip is available [*here*](https://github.com/user-attachments/files/27381418/Motor-subsystem-EGR314.X.zip).
