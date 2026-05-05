@@ -26,7 +26,7 @@
 
     
       
-        <title>include "mcc_generated_files/system/system.h" - EGR 314 Raunak Singh Data Sheet</title>
+        <title>09 Code - EGR 314 Raunak Singh Data Sheet</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#include-mcc_generated_filessystemsystemh" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              include "mcc_generated_files/system/system.h"
+              09 Code
             
           </span>
         </div>
@@ -914,18 +914,62 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    09 Code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    include "mcc_generated_files/system/system.h"
+    09 Code
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1010,8 +1054,32 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1034,228 +1102,244 @@
   
 
 
-<h1 id="include-mcc_generated_filessystemsystemh">include "mcc_generated_files/system/system.h"</h1>
-<h1 id="include">include <xc.h></xc.h></h1>
-<h1 id="include_1">include <stdint.h></stdint.h></h1>
-<h1 id="include_2">include <stdbool.h></stdbool.h></h1>
-<h1 id="include_3">include <stddef.h></stddef.h></h1>
-<p>/<em> ?? SPI motor command bytes ?? </em>/</p>
-<h1 id="define-fwd-0xef">define FWD     0xEF</h1>
-<h1 id="define-rev-0xed">define REV     0xED</h1>
-<h1 id="define-stp-0xff">define STP     0xFF</h1>
-<p>/<em> ?? UART protocol defines ?? </em>/</p>
-<h1 id="define-my_id-r">define MY_ID               'R'</h1>
-<h1 id="define-other_id_1-m">define OTHER_ID_1          'M'</h1>
-<h1 id="define-other_id_2-l">define OTHER_ID_2          'L'</h1>
-<h1 id="define-broadcast_id-x">define BROADCAST_ID        'X'</h1>
-<h1 id="define-prefix_0-a">define PREFIX_0            'A'</h1>
-<h1 id="define-prefix_1-z">define PREFIX_1            'Z'</h1>
-<h1 id="define-suffix_0-y">define SUFFIX_0            'Y'</h1>
-<h1 id="define-suffix_1-b">define SUFFIX_1            'B'</h1>
-<h1 id="define-max_message_bytes-64u">define MAX_MESSAGE_BYTES   64U</h1>
-<h1 id="define-message_gap_ms-2u">define MESSAGE_GAP_MS      2U</h1>
-<h1 id="define-idle_timeout_ms-1000u">define IDLE_TIMEOUT_MS     1000U</h1>
-<h1 id="define-idle_message">define IDLE_MESSAGE        "..........."</h1>
-<h1 id="define-msg_too_long-azmessage-too-longyb">define MSG_TOO_LONG        "AZmessage too longYB"</h1>
-<h1 id="define-broadcast_message-azbroadcast-msgyb">define BROADCAST_MESSAGE   "AZBroadcast msgYB"</h1>
-<p>/<em> ?? UART helpers ?? </em>/
-static void UART1_SendByte_Blocking(uint8_t data)
-{
-    while (!UART1_IsTxReady())
-    {
-    }
-    UART1_Write(data);
-}</p>
-<p>static void UART1_SendString(const char <em>text)
-{
-    while (</em>text != '\0')
-    {
-        UART1_SendByte_Blocking((uint8_t)*text);
-        text++;
-    }
-}</p>
-<p>static bool MessageIsValid(const uint8_t *buffer, size_t length)
-{
-    if (length &lt; 6U)
-    {
-        return false;
-    }
-    if ((buffer[0] != (uint8_t)PREFIX_0) ||
-        (buffer[1] != (uint8_t)PREFIX_1))
-    {
-        return false;
-    }
-    if ((buffer[length - 2U] != (uint8_t)SUFFIX_0) ||
-        (buffer[length - 1U] != (uint8_t)SUFFIX_1))
-    {
-        return false;
-    }
-    if ((buffer[2] != (uint8_t)MY_ID) &amp;&amp;
-        (buffer[2] != (uint8_t)OTHER_ID_1) &amp;&amp;
-        (buffer[2] != (uint8_t)OTHER_ID_2))
-    {
-        return false;
-    }</p>
-<p>return true;
-}</p>
-<p>static bool UART1_ReadMessage(uint8_t <em>buffer, size_t </em>length)
-{
-    uint16_t gap_ms = 0U;
-    size_t count = 0U;
-    size_t uart_error;</p>
-<p>*length = 0U;</p>
-<p>while (1)
-    {
-        if (UART1_IsRxReady())
-        {
-            gap_ms = 0U;
-      uart_error = UART1_ErrorGet();
-            buffer[count] = UART1_Read();</p>
-<p>//            if (uart_error != 0U)
-//            {
-//                count = 0U;
-//                continue;
-//            }
-          count++;
-            if (count &gt;= MAX_MESSAGE_BYTES)
-            {
-                UART1_SendString(MSG_TOO_LONG);
-              while (1)
-                {
-                    if (UART1_IsRxReady())
-                    {
-                        (void)UART1_ErrorGet();
-                        (void)UART1_Read();
-                        gap_ms = 0U;
-                    }
-                    else
-                    {
-                        __delay_ms(1);
-                        gap_ms++;
-                        if (gap_ms &gt;= MESSAGE_GAP_MS)
-                        {
-                            <em>length = 0U;
-                            return false;
-                        }
-                    }
-                }
-            }
-        }
-        else
-        {
-            if (count == 0U)
-            {
-                return false;
-            }
-          __delay_ms(1);
-            gap_ms++;
-            if (gap_ms &gt;= MESSAGE_GAP_MS)
-            {
-                </em>length = count;
-                return true;
-            }
-        }
-    }
-}</p>
-<p>static void ProcessMessage(const uint8_t <em>buffer, size_t length)
-{
-    size_t i;
-    uint8_t receiver_id;
-    if (!MessageIsValid(buffer, length))
-    {
-        return;
-    }
-    receiver_id = buffer[3];
-    if (receiver_id == (uint8_t)BROADCAST_ID)
-    {
-        UART1_SendString(BROADCAST_MESSAGE);
-    }
-    if (receiver_id == (uint8_t)MY_ID)
-    {
-        if (length &gt;= 9U)
-        {
-            size_t payload_len = length - 6U;
-            /</em> AZLRFWDYB or AZMRFWDYB ? forward <em>/
-            if ((payload_len == 3U) &amp;&amp;
-                (buffer[4] == (uint8_t)'F') &amp;&amp;
-                (buffer[5] == (uint8_t)'W') &amp;&amp;
-                (buffer[6] == (uint8_t)'D'))
-            {
-                CSN_SetLow();
-                __delay_us(5);
-                SPI1_ByteExchange(FWD);
-                __delay_ms(5);
-                CSN_SetHigh();
-            }
-            /</em> AZLRRESYB or AZMRRESYB ? reverse <em>/
-            else if ((payload_len == 3U) &amp;&amp;
-                     (buffer[4] == (uint8_t)'R') &amp;&amp;
-                     (buffer[5] == (uint8_t)'E') &amp;&amp;
-                     (buffer[6] == (uint8_t)'S'))
-            {
-                CSN_SetLow();
-                __delay_us(10);
-                SPI1_ByteExchange(REV);
-                __delay_ms(10);
-                CSN_SetHigh();
-            }
-            /</em> AZLRSTPYB or AZMRSTPYB ? stop */
-            else if ((payload_len == 3U) &amp;&amp;
-                     (buffer[4] == (uint8_t)'S') &amp;&amp;
-                     (buffer[5] == (uint8_t)'T') &amp;&amp;
-                     (buffer[6] == (uint8_t)'P'))
-            {
-                CSN_SetLow();
-                __delay_us(5);
-                SPI1_ByteExchange(STP);
-                __delay_ms(5);
-                CSN_SetHigh();
-            }
-        }
-        return;
-    }
-    for (i = 0U; i &lt; length; i++)
-    {
-        UART1_SendByte_Blocking(buffer[i]);
-    }
-}</p>
-<p>void main(void)
-{
-    uint8_t message_buffer[MAX_MESSAGE_BYTES];
-    size_t message_length;
-    uint16_t idle_count_ms = 0U;</p>
-<p>SYSTEM_Initialize();
-    UART1_Initialize();
-    SPI1_Initialize();
-    SPI1_Host_Open(HOST_CONFIG);
-    CSN_SetHigh();
-    PWM_SetLow();
-    DIR1_SetLow();
-    DIS_SetLow();
-    __delay_ms(1000);
-    INTERRUPT_GlobalInterruptEnable();
-    while (1)
-    {
-        if (UART1_IsRxReady())
-        {
-            idle_count_ms = 0U;
-            if (UART1_ReadMessage(message_buffer, &amp;message_length))
-            {
-                ProcessMessage(message_buffer, message_length);
-            }
-        }
-        else
-        {
-            __delay_ms(1);
-            idle_count_ms++;
-           if (idle_count_ms &gt;= IDLE_TIMEOUT_MS)
-            {
-                UART1_SendString(IDLE_MESSAGE);
-                idle_count_ms = 0U;
-            }
-        }
-    }
-}</p>
+  <h1>09 Code</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This page contains the firmware for the <strong>PIC18F57Q83</strong> microcontroller that controls the <strong>motor subsystem</strong> of the <strong>Amphibot</strong>. The code handles <strong>UART message parsing</strong>, <strong>SPI motor commands</strong>, and an <strong>idle watchdog</strong> that periodically transmits a status string when no messages are received (for debugging purposes).</p>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">"mcc_generated_files/system/system.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;xc.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdbool.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
+
+<span class="cm">/* SPI motor command bytes */</span>
+<span class="cp">#define FWD     0xEF</span>
+<span class="cp">#define REV     0xED</span>
+<span class="cp">#define STP     0xFF</span>
+
+<span class="cm">/* UART protocol defines */</span>
+<span class="cp">#define MY_ID               'R'</span>
+<span class="cp">#define OTHER_ID_1          'M'</span>
+<span class="cp">#define OTHER_ID_2          'L'</span>
+<span class="cp">#define BROADCAST_ID        'X'</span>
+
+<span class="cp">#define PREFIX_0            'A'</span>
+<span class="cp">#define PREFIX_1            'Z'</span>
+<span class="cp">#define SUFFIX_0            'Y'</span>
+<span class="cp">#define SUFFIX_1            'B'</span>
+
+<span class="cp">#define MAX_MESSAGE_BYTES   64U</span>
+<span class="cp">#define MESSAGE_GAP_MS      2U</span>
+<span class="cp">#define IDLE_TIMEOUT_MS     1000U</span>
+
+<span class="cp">#define IDLE_MESSAGE        "..........."</span>
+<span class="cp">#define MSG_TOO_LONG        "AZmessage too longYB"</span>
+<span class="cp">#define BROADCAST_MESSAGE   "AZBroadcast msgYB"</span>
+
+<span class="cm">/* UART helpers */</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">UART1_SendByte_Blocking</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">UART1_IsTxReady</span><span class="p">())</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">UART1_Write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">UART1_SendString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">text</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">'\0'</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UART1_SendByte_Blocking</span><span class="p">((</span><span class="kt">uint8_t</span><span class="p">)</span><span class="o">*</span><span class="n">text</span><span class="p">);</span>
+<span class="w">        </span><span class="n">text</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">MessageIsValid</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6U</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">buffer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">PREFIX_0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">PREFIX_1</span><span class="p">))[</span><span class="mi">2</span><span class="p">]</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">buffer</span><span class="p">[</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2U</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">SUFFIX_0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="p">(</span><span class="n">buffer</span><span class="p">[</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1U</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">SUFFIX_1</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">buffer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">MY_ID</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="w">        </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">OTHER_ID_1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="w">        </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">OTHER_ID_2</span><span class="p">))[</span><span class="mi">3</span><span class="p">]</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">UART1_ReadMessage</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="o">*</span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">gap_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">uart_error</span><span class="p">;</span>
+
+<span class="w">    </span><span class="o">*</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">UART1_IsRxReady</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">gap_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">            </span><span class="n">uart_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UART1_ErrorGet</span><span class="p">();</span>
+<span class="w">            </span><span class="n">buffer</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UART1_Read</span><span class="p">();</span>
+<span class="w">            </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">MAX_MESSAGE_BYTES</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">UART1_SendString</span><span class="p">(</span><span class="n">MSG_TOO_LONG</span><span class="p">);</span>
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">UART1_IsRxReady</span><span class="p">())</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">UART1_ErrorGet</span><span class="p">();</span>
+<span class="w">                        </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">UART1_Read</span><span class="p">();</span>
+<span class="w">                        </span><span class="n">gap_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="k">else</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">gap_ms</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gap_ms</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">MESSAGE_GAP_MS</span><span class="p">)</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="o">*</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">                            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0U</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">gap_ms</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gap_ms</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">MESSAGE_GAP_MS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="o">*</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ProcessMessage</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">receiver_id</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">MessageIsValid</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">receiver_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;[</span><span class="mi">4</span><span class="p">]</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">receiver_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">BROADCAST_ID</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UART1_SendString</span><span class="p">(</span><span class="n">BROADCAST_MESSAGE</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">receiver_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">MY_ID</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">9U</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">size_t</span><span class="w"> </span><span class="n">payload_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">6U</span><span class="p">;</span>
+<span class="w">            </span><span class="cm">/* Forward */</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">payload_len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3U</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'F'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">                </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'W'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">                </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'D'</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">CSN_SetLow</span><span class="p">();</span>
+<span class="w">                </span><span class="n">__delay_us</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">                </span><span class="n">SPI1_ByteExchange</span><span class="p">(</span><span class="n">FWD</span><span class="p">);</span>
+<span class="w">                </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">                </span><span class="n">CSN_SetHigh</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="cm">/* Reverse */</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">payload_len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3U</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                     </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'R'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">                     </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'E'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">                     </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'S'</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">CSN_SetLow</span><span class="p">();</span>
+<span class="w">                </span><span class="n">__delay_us</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">                </span><span class="n">SPI1_ByteExchange</span><span class="p">(</span><span class="n">REV</span><span class="p">);</span>
+<span class="w">                </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">                </span><span class="n">CSN_SetHigh</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="cm">/* Stop */</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">payload_len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3U</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                     </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'S'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">                     </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'T'</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">                     </span><span class="p">(</span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="sc">'P'</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">CSN_SetLow</span><span class="p">();</span>
+<span class="w">                </span><span class="n">__delay_us</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">                </span><span class="n">SPI1_ByteExchange</span><span class="p">(</span><span class="n">STP</span><span class="p">);</span>
+<span class="w">                </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">                </span><span class="n">CSN_SetHigh</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">UART1_SendByte_Blocking</span><span class="p">(</span><span class="n">buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">message_buffer</span><span class="p">[</span><span class="n">MAX_MESSAGE_BYTES</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">message_length</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">idle_count_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">SYSTEM_Initialize</span><span class="p">();</span>
+<span class="w">    </span><span class="n">UART1_Initialize</span><span class="p">();</span>
+<span class="w">    </span><span class="n">SPI1_Initialize</span><span class="p">();</span>
+<span class="w">    </span><span class="n">SPI1_Host_Open</span><span class="p">(</span><span class="n">HOST_CONFIG</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CSN_SetHigh</span><span class="p">();</span>
+<span class="w">    </span><span class="n">PWM_SetLow</span><span class="p">();</span>
+<span class="w">    </span><span class="n">DIR1_SetLow</span><span class="p">();</span>
+<span class="w">    </span><span class="n">DIS_SetLow</span><span class="p">();</span>
+<span class="w">    </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">INTERRUPT_GlobalInterruptEnable</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">UART1_IsRxReady</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">idle_count_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">UART1_ReadMessage</span><span class="p">(</span><span class="n">message_buffer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">message_length</span><span class="p">))</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ProcessMessage</span><span class="p">(</span><span class="n">message_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">message_length</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">idle_count_ms</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">idle_count_ms</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">IDLE_TIMEOUT_MS</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">UART1_SendString</span><span class="p">(</span><span class="n">IDLE_MESSAGE</span><span class="p">);</span>
+<span class="w">                </span><span class="n">idle_count_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
