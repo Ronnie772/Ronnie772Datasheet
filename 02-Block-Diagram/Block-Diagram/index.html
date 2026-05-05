@@ -645,6 +645,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Decisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1079,6 +1097,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Decisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1110,7 +1146,13 @@
 <p>Two <strong>override/system check buttons</strong> are included to support manual testing and diagnostic procedures. These inputs provide digital signals that allow the system to verify motor driver functionality and motor behavior independently of the firmware.</p>
 <h2 id="block-diagram">Block Diagram</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/f26372dc-6c4e-44e1-be38-3e5efb17fab0" data-desc-position="bottom"><img width="1081" height="652" alt="image" src="https://github.com/user-attachments/assets/f26372dc-6c4e-44e1-be38-3e5efb17fab0"></a></p>
-<p>Downloadable pdf available <a href="https://github.com/user-attachments/files/27378867/block-diagram-RSC-EGR314.drawio.pdf"><em>here</em></a></p>
+<h2 id="design-decisions">Design Decisions</h2>
+<p>The block diagram was developed by first identifying the core functional requirements of the motor subsystem: the ability to receive commands over UART, drive two DC motors bidirectionally, and operate reliably from a single battery source. The <strong>PIC18F57Q83</strong> was selected as the central microcontroller because it provides sufficient <strong>PWM and digital I/O pins</strong>, native <strong>SPI and UART peripherals</strong>, and is directly supported by <strong>MPLAB X IDE</strong> and <strong>MCC</strong>, which streamlined firmware development and pin configuration. </p>
+<p>The <strong>12V 7Ah battery</strong> was chosen to provide enough current capacity to drive both motors simultaneously without significant voltage sag. Rather than powering the microcontroller directly from 12V, two separate regulation stages were designed: the <strong>AP63203WU-7</strong> switching regulator steps down to <strong>3.3V</strong> for the logic circuitry, minimizing heat dissipation, while the <strong>L7806ABD2T</strong> provides a stable <strong>6V</strong> rail for the motors through the <strong>IFX9201SGAUMA1</strong> H-bridge driver. This separation ensures that switching noise from the motor driver does not couple into the sensitive microcontroller logic.</p>
+<p>The <strong>SPI interface</strong> was chosen to communicate motor commands to the H-bridge driver because it offers faster and more reliable data transfer compared to a simple GPIO toggle approach, allowing precise control over motor direction and speed in a single transaction. The two <strong>override/system check buttons</strong> were included from the start to support hardware-level testing and verification of motor driver behavior independently of firmware, which proved critical during bring-up and debugging.</p>
+<h2 id="resources">Resources</h2>
+<p>Downloadable pdf available <a href="https://github.com/user-attachments/files/27378867/block-diagram-RSC-EGR314.drawio.pdf"><em>here</em></a>
+zip file of project available <a href="https://github.com/user-attachments/files/27380395/egr314-design-RSC.v2.zip.zip"><em>here</em></a></p>
 
 
 
